@@ -85,7 +85,6 @@
 		1813D27619A3215C005FC3DC /* 暂停灰K60.png in Resources */ = {isa = PBXBuildFile; fileRef = 1813D24B19A3215C005FC3DC /* 暂停灰K60.png */; };
 		1813D27719A3215C005FC3DC /* 字号调整.png in Resources */ = {isa = PBXBuildFile; fileRef = 1813D24C19A3215C005FC3DC /* 字号调整.png */; };
 		1813D27819A3215C005FC3DC /* 字号调整红.png in Resources */ = {isa = PBXBuildFile; fileRef = 1813D24D19A3215C005FC3DC /* 字号调整红.png */; };
-		18168DFF19D25C3C00B6A988 /* eRAN6.0 BTS3203E 产品文档.zip in Resources */ = {isa = PBXBuildFile; fileRef = 18168DFE19D25C3C00B6A988 /* eRAN6.0 BTS3203E 产品文档.zip */; };
 		18168E0919D29D0400B6A988 /* 大包背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 18168E0319D29D0400B6A988 /* 大包背景.png */; };
 		18168E0A19D29D0400B6A988 /* 切换列表白.png in Resources */ = {isa = PBXBuildFile; fileRef = 18168E0419D29D0400B6A988 /* 切换列表白.png */; };
 		18168E0B19D29D0400B6A988 /* 切换列表红.png in Resources */ = {isa = PBXBuildFile; fileRef = 18168E0519D29D0400B6A988 /* 切换列表红.png */; };
@@ -262,7 +261,6 @@
 		1813D24C19A3215C005FC3DC /* 字号调整.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "字号调整.png"; sourceTree = "<group>"; };
 		1813D24D19A3215C005FC3DC /* 字号调整红.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "字号调整红.png"; sourceTree = "<group>"; };
 		1813D27919A321E1005FC3DC /* ImageNameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageNameConfig.h; sourceTree = "<group>"; };
-		18168DFE19D25C3C00B6A988 /* eRAN6.0 BTS3203E 产品文档.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "eRAN6.0 BTS3203E 产品文档.zip"; sourceTree = "<group>"; };
 		18168E0319D29D0400B6A988 /* 大包背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大包背景.png"; sourceTree = "<group>"; };
 		18168E0419D29D0400B6A988 /* 切换列表白.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换列表白.png"; sourceTree = "<group>"; };
 		18168E0519D29D0400B6A988 /* 切换列表红.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换列表红.png"; sourceTree = "<group>"; };
@@ -596,7 +594,6 @@
 			isa = PBXGroup;
 			children = (
 				183CDBE319E8CFB30083382A /* demo.hhc */,
-				18168DFE19D25C3C00B6A988 /* eRAN6.0 BTS3203E 产品文档.zip */,
 				1813D22219A32126005FC3DC /* Image */,
 				1800E10019D2B7CA0069F9B8 /* LocalBook.plist */,
 			);
@@ -931,7 +928,6 @@
 				1813D26A19A3215C005FC3DC /* 搜索框.png in Resources */,
 				1813D25B19A3215C005FC3DC /* 快搜灰K20.png in Resources */,
 				1818682519F4E767009E4CE2 /* 取消下载红.png in Resources */,
-				18168DFF19D25C3C00B6A988 /* eRAN6.0 BTS3203E 产品文档.zip in Resources */,
 				1813D26419A3215C005FC3DC /* 书架白-icon.png in Resources */,
 				18C60463199B523F00E7A204 /* AnotherVC.xib in Resources */,
 				1813D26619A3215C005FC3DC /* 书签白.png in Resources */,
