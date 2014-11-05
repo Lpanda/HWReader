@@ -145,7 +145,6 @@
 		18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DACC19985DB9009C8639 /* QuickSearchVC.m */; };
 		18D0DAD31998674A009C8639 /* DownloadManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadManagerVC.m */; };
 		18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD71998B30A009C8639 /* AnimationKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A0EB42601A0A261700560B8D /* TTT.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EB425F1A0A261700560B8D /* TTT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -356,8 +355,6 @@
 		18D0DAD51998B2B2009C8639 /* AnimationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDefine.h; sourceTree = "<group>"; };
 		18D0DAD61998B30A009C8639 /* AnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationKit.h; sourceTree = "<group>"; };
 		18D0DAD71998B30A009C8639 /* AnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKit.m; sourceTree = "<group>"; };
-		A0EB425E1A0A261700560B8D /* TTT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTT.h; sourceTree = "<group>"; };
-		A0EB425F1A0A261700560B8D /* TTT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTT.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,7 +424,6 @@
 		180D52BA197FB82F00B803A1 /* HWReader */ = {
 			isa = PBXGroup;
 			children = (
-				A0EB425D1A0A260A00560B8D /* test */,
 				180D52C3197FB82F00B803A1 /* AppDelegate.h */,
 				180D52C4197FB82F00B803A1 /* AppDelegate.m */,
 				180D52C6197FB82F00B803A1 /* Images.xcassets */,
@@ -817,15 +813,6 @@
 			path = AnimationKit;
 			sourceTree = "<group>";
 		};
-		A0EB425D1A0A260A00560B8D /* test */ = {
-			isa = PBXGroup;
-			children = (
-				A0EB425E1A0A261700560B8D /* TTT.h */,
-				A0EB425F1A0A261700560B8D /* TTT.m */,
-			);
-			name = test;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1017,7 +1004,6 @@
 				180D532F197FB93600B803A1 /* ZipArchive.mm in Sources */,
 				180D52FF197FB92400B803A1 /* NormalNaviBar.m in Sources */,
 				182732F219949CBC0079576D /* LoadRefreshTableView.m in Sources */,
-				A0EB42601A0A261700560B8D /* TTT.m in Sources */,
 				180D532C197FB93600B803A1 /* mztools.c in Sources */,
 				180D532D197FB93600B803A1 /* unzip.c in Sources */,
 				18BA63A219C0290C008D07F9 /* ChmParser.m in Sources */,
