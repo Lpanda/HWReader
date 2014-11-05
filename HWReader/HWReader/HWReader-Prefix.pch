@@ -1,0 +1,68 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "AnimationKit.h"
+    #import "ImageNameConfig.h"
+    #import "ImageCategory.h"
+    #import "NSString+Category.h"
+    #import "UIViewController+ViewControllerCategory.h"
+    #import "WidgetLayOut.h"
+#endif
+
+#define READ_MODULE 0
+#define DOWNLOAD_MODULE  1
+#define QUICKSEARCH_MODULE 2
+#define ANOTHER_MODULE   3
+
+#define DOCUMENT_ZIPFILEFOLDERPATH   @"zipFiles"                     //  document下存放未解压文件的文件夹
+#define DOCUMENT_UNZIPFILEFOLDERPATH  @"unZipFiles"             //   document下存放所有解压后的文件的文件夹
+
+#define IOS_7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
+
+#define ISPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0
+#define TEXTALIGNMENT_CENTER     NSTextAlignmentCenter
+#define TEXTALIGNMENT_LEFT          NSTextAlignmentLeft
+#define TEXTALIGNMENT_RIGHT        NSTextAlignmentRight
+#else
+#define TEXTALIGNMENT_CENTER UITextAlignmentCenter
+#define TEXTALIGNMENT_LEFT      UITextAlignmentLeft
+#define TEXTALIGNMENT_RIGHT    UITextAlignmentRight
+#endif
+
+//     ShowAlertView
+#define SHOWALERTVIEW(Title,Message,Delegate,CancelTitle,OtherTitles) \
+    [[[UIAlertView alloc]initWithTitle:Title message:Message \
+        delegate:Delegate cancelButtonTitle:CancelTitle otherButtonTitles:OtherTitles, nil]show]\
+
+//     UserDefaults Keys
+#define SENDADDR    @"sendAddr"
+#define FEEDBACKADDR    @"feedBackAddr"
+#define SENDPWD @"sendPwd"
+#define USERRECEIVEADDR @"userReceiveAddr"
+#define USERNICKNAME    @"userNickName"
+
+//  横竖屏切换通知
+
+#define CHANGE_INTERTERFACEORIENTATION  @"ChangeInterfaceOrientation"
+
+
+
+
+
+
+
+

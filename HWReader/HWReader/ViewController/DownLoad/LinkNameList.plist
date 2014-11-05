@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Single RANMBSC</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 UMTS 产品文档 V900R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 UMTS 产品文档 V900R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 UMTS 产品文档 V900R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GU 产品文档 V900R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GU 产品文档 V900R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GU 产品文档 V900R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GSM 产品文档 V900R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GSM 产品文档 V900R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GSM 产品文档 V900R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 UMTS 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 UMTS 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 UMTS 产品文档 V100R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GU 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GU 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GU 产品文档 V100R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GSM 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GSM 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GSM 产品文档 V100R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Single RANMBTS</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R010C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>UMTS RANRNC</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 UMTS 产品文档 V900R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 UMTS 产品文档 V900R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 UMTS 产品文档 V900R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 UMTS 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 UMTS 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 UMTS 产品文档 V100R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>UMTS RANNodeB</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R010C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3812AE 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3812AE 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3812E 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3812E 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>DBS3800 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>DBS3800 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>UMTS RANFeature</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>RAN15.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>RAN16.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>RAN17.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>LTE FDD RANeNodeB</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R010C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>LTE FDD RANFeature</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>eRAN6.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>eRAN7.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>eRAN8.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>LTE TDD RANeNodeB</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>LTE TDD RANeFeature</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>eRAN6.0 LTE TDD 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>eRAN7.0 LTE TDD 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>GSM RANGBSC</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GSM 产品文档 V900R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GSM 产品文档 V900R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6900 GSM 产品文档 V900R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GSM 产品文档 V100R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GSM 产品文档 V100R016C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BSC6910 GSM 产品文档 V100R017C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>GSM RANGBTS</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R010C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>GSM RANFeature</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>GBSS15.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>GBSS16.0 特性文档</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Small CellMicro</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>BTS3202E 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3202E 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3203E LTE 产品文档 V100R006C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3803E WCDMA 产品文档 V200R015C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3902E WCDMA 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>BTS3902E WCDMA 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Small CellLampSite</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R008C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R009C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>3900系列基站 产品文档 V100R010C00</string>
+			<key>url</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>

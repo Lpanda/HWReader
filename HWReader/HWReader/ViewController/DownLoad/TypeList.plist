@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Single RAN</key>
+	<array>
+		<string>MBSC</string>
+		<string>MBTS</string>
+	</array>
+	<key>UMTS RAN</key>
+	<array>
+		<string>RNC</string>
+		<string>NodeB</string>
+		<string>Feature</string>
+	</array>
+	<key>LTE FDD RAN</key>
+	<array>
+		<string>eNodeB</string>
+		<string>Feature</string>
+	</array>
+	<key>LTE TDD RAN</key>
+	<array>
+		<string>eNodeB</string>
+		<string>Feature</string>
+	</array>
+	<key>GSM RAN</key>
+	<array>
+		<string>GBSC</string>
+		<string>GBTS</string>
+		<string>Feature</string>
+	</array>
+	<key>Small Cell</key>
+	<array>
+		<string>Micro</string>
+		<string>LampSite</string>
+	</array>
+</dict>
+</plist>
