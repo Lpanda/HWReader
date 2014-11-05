@@ -12,12 +12,16 @@
 	<dict>
 		<key>3680bf93-20e3-b044-955c-40426b2d4673++9500</key>
 		<string>https://10.65.98.25/svn/ISS-CD/WirelessMobile/HWReader/ios</string>
+		<key>A3E1B0D9D4DCE4233FAE897FF2984414509EAA94</key>
+		<string>https://github.com/Lpanda/HWReader.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HWReader/HWReader.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3680bf93-20e3-b044-955c-40426b2d4673++9500</key>
+		<string>../../../../ios</string>
+		<key>A3E1B0D9D4DCE4233FAE897FF2984414509EAA94</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
@@ -26,13 +30,21 @@
 		<string>https://10.65.98.25/svn/ISS-CD</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://10.65.98.25/svn/ISS-CD/WirelessMobile/HWReader/ios/HWReader/HWReader.xcodeproj</string>
+	<string>https://github.com/Lpanda/HWReader.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3680bf93-20e3-b044-955c-40426b2d4673++9500</string>
+	<string>A3E1B0D9D4DCE4233FAE897FF2984414509EAA94</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A3E1B0D9D4DCE4233FAE897FF2984414509EAA94</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HWReader</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>
