@@ -21,10 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //[DocManager unZipFiles];
-    
-    NSLog(@"hello git");
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:[[BookRackVC alloc]init]];
