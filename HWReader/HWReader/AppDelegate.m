@@ -50,7 +50,8 @@
     [self.window setRootViewController:tabBar];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
+    
+    NSLog(@"test from zc");
     return YES;
 }
 
