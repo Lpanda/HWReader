@@ -24,7 +24,7 @@
         titleLB.backgroundColor = [UIColor clearColor];
         titleLB.center = CGPointMake(self.center.x, TITLELB_CENTERY);
         titleLB.text = title;
-        titleLB.font = [UIFont boldSystemFontOfSize:TITLELB_FONT_SIZE];
+        titleLB.font = [UIFont systemFontOfSize:TITLELB_FONT_SIZE];
         titleLB.textAlignment = TEXTALIGNMENT_CENTER;
         [backgroundImg addSubview:titleLB];
         

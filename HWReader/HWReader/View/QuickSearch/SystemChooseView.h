@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SystemChooseView : UIView
+@interface SystemChooseView : UIView{
+    NSArray *systems;
+}
 
 @end

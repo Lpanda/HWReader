@@ -29,6 +29,7 @@
                                                                 PULLDOWNBTN_WIDTH, PULLDOWNBTN_HEIGHT)];
         pullDownBtn.center = CGPointMake(self.center.x, BAR_HEIGHT/2);
         [pullDownBtn setTitle:title forState:UIControlStateNormal];
+        pullDownBtn.titleLabel.font = [UIFont systemFontOfSize:20.0f];
         [pullDownBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [pullDownBtn addTarget:self action:@selector(chooseSys) forControlEvents:UIControlEventTouchUpInside];
         [backgroundImg addSubview:pullDownBtn];
