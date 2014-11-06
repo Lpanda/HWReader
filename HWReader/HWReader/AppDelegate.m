@@ -51,7 +51,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    NSLog(@"test from zc");
+    NSLog(@"test from zc from zc");
     return YES;
 }
 
