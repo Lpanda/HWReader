@@ -8,6 +8,6 @@
 
 #import "BaseVC.h"
 
-@interface QuickSearchVC : BaseVC
+@interface QuickSearchVC : BaseVC<UITextFieldDelegate>
 
 @end

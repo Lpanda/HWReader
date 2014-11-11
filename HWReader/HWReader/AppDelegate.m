@@ -22,12 +22,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:[[BookRackVC alloc]init]];
-    navi.navigationBarHidden = YES;
     
     NSArray *controllers = [NSArray arrayWithObjects:[[BookRackVC alloc]init],[[DownloadMainVC alloc]init],
-                                                                                [[QuickSearchVC alloc]init],
+                                                                [[QuickSearchVC alloc]initWithNibName:@"QuickSearchVC" bundle:nil],
                             [[AnotherVC alloc]initWithNibName:@"AnotherVC" bundle:nil],nil];
     
     NSMutableArray *tabItemControllers = [NSMutableArray array];

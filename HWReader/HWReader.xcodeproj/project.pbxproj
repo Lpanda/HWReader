@@ -125,6 +125,9 @@
 		1858417119EBD57C006C0AF2 /* TypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1858417019EBD57C006C0AF2 /* TypeList.plist */; };
 		1858417319EBD68D006C0AF2 /* LinkNameList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1858417219EBD68D006C0AF2 /* LinkNameList.plist */; };
 		18635019199B11A4003B1064 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18635018199B11A4003B1064 /* CFNetwork.framework */; };
+		189E523B1A0B0E4300DE0C6B /* QuickSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189E523A1A0B0E4300DE0C6B /* QuickSearchVC.xib */; };
+		189E523F1A0B16F700DE0C6B /* SystemNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189E523E1A0B16F700DE0C6B /* SystemNames.plist */; };
+		189E52451A0B17BE00DE0C6B /* SystemChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E52441A0B17BE00DE0C6B /* SystemChooseView.m */; };
 		18B934EB198890F200779D32 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B934EA198890F200779D32 /* BaseVC.m */; };
 		18BA638519C0201C008D07F9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BA638419C0201C008D07F9 /* MessageUI.framework */; };
 		18BA639119C026E5008D07F9 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA638819C026E5008D07F9 /* Base64Transcoder.m */; };
@@ -315,6 +318,10 @@
 		1858417019EBD57C006C0AF2 /* TypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TypeList.plist; sourceTree = "<group>"; };
 		1858417219EBD68D006C0AF2 /* LinkNameList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LinkNameList.plist; sourceTree = "<group>"; };
 		18635018199B11A4003B1064 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		189E523A1A0B0E4300DE0C6B /* QuickSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickSearchVC.xib; sourceTree = "<group>"; };
+		189E523E1A0B16F700DE0C6B /* SystemNames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SystemNames.plist; sourceTree = "<group>"; };
+		189E52431A0B17BE00DE0C6B /* SystemChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemChooseView.h; sourceTree = "<group>"; };
+		189E52441A0B17BE00DE0C6B /* SystemChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemChooseView.m; sourceTree = "<group>"; };
 		18B934E9198890F200779D32 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		18B934EA198890F200779D32 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		18BA638419C0201C008D07F9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
@@ -486,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				183B489D19D3AB5E007C642A /* BookRack */,
+				189E52421A0B179A00DE0C6B /* QuickSearch */,
 				1836BA2719ED04090089C90B /* Download */,
 				182412C61989D72900348146 /* ReadSubView */,
 				180D52F1197FB92400B803A1 /* CustomNaviBar */,
@@ -718,6 +726,15 @@
 			path = BookRack;
 			sourceTree = "<group>";
 		};
+		189E52421A0B179A00DE0C6B /* QuickSearch */ = {
+			isa = PBXGroup;
+			children = (
+				189E52431A0B17BE00DE0C6B /* SystemChooseView.h */,
+				189E52441A0B17BE00DE0C6B /* SystemChooseView.m */,
+			);
+			path = QuickSearch;
+			sourceTree = "<group>";
+		};
 		18BA638619C026E5008D07F9 /* SKSMTPMessage */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,9 +797,11 @@
 			children = (
 				18D0DACB19985DB9009C8639 /* QuickSearchVC.h */,
 				18D0DACC19985DB9009C8639 /* QuickSearchVC.m */,
+				189E523A1A0B0E4300DE0C6B /* QuickSearchVC.xib */,
 				1811E8DC19A1A08800D2DDF1 /* QuickSearchResultVC.h */,
 				1811E8DD19A1A08800D2DDF1 /* QuickSearchResultVC.m */,
 				1811E8DE19A1A08800D2DDF1 /* QuickSearchResultVC.xib */,
+				189E523E1A0B16F700DE0C6B /* SystemNames.plist */,
 			);
 			path = QuickSearch;
 			sourceTree = "<group>";
@@ -939,6 +958,7 @@
 				18168E0E19D29D0400B6A988 /* 小包背景.png in Resources */,
 				1813D26519A3215C005FC3DC /* 书架红-icon.png in Resources */,
 				1813D26119A3215C005FC3DC /* 取消输入红.png in Resources */,
+				189E523F1A0B16F700DE0C6B /* SystemNames.plist in Resources */,
 				1813D25D19A3215C005FC3DC /* 目录红.png in Resources */,
 				1813D25C19A3215C005FC3DC /* 目录白.png in Resources */,
 				1813D25019A3215C005FC3DC /* 播放红.png in Resources */,
@@ -958,6 +978,7 @@
 				1818682C19F4E767009E4CE2 /* welcome_5.png in Resources */,
 				1811E8E019A1A08800D2DDF1 /* QuickSearchResultVC.xib in Resources */,
 				18168E0D19D29D0400B6A988 /* 切换书架红.png in Resources */,
+				189E523B1A0B0E4300DE0C6B /* QuickSearchVC.xib in Resources */,
 				183CDBE619E90BCD0083382A /* DownLoadMainVC.xib in Resources */,
 				18168E0C19D29D0400B6A988 /* 切换书架白.png in Resources */,
 				182CA9B819D1183E00E7B45E /* FeedBackView.xib in Resources */,
@@ -1004,6 +1025,7 @@
 				180D532F197FB93600B803A1 /* ZipArchive.mm in Sources */,
 				180D52FF197FB92400B803A1 /* NormalNaviBar.m in Sources */,
 				182732F219949CBC0079576D /* LoadRefreshTableView.m in Sources */,
+				189E52451A0B17BE00DE0C6B /* SystemChooseView.m in Sources */,
 				180D532C197FB93600B803A1 /* mztools.c in Sources */,
 				180D532D197FB93600B803A1 /* unzip.c in Sources */,
 				18BA63A219C0290C008D07F9 /* ChmParser.m in Sources */,
