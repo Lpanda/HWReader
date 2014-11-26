@@ -25,8 +25,11 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
     {
       NSString *currentNodeContent =
         [NSString stringWithCString:(const char *)currentNode->name encoding:NSUTF8StringEncoding];
-      [resultForNode setObject:currentNodeContent forKey:@"nodeName"];
-        [resultForNode setObject:[NSString stringWithFormat:@"%d", depth] forKey:@"depth"];
+        
+        if(![currentNodeContent isEqualToString:@"text"]){
+            [resultForNode setObject:currentNodeContent forKey:@"nodeName"];
+            [resultForNode setObject:[NSString stringWithFormat:@"%d", depth] forKey:@"depth"];
+        }
     }
 
   if (currentNode->content && currentNode->content != (xmlChar *)-1)

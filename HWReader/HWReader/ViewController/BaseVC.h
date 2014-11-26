@@ -13,7 +13,9 @@
     
 }
 
-- (void)drawTopNaviBar;
+@property (strong,  nonatomic) BaseNaviBar *naviBar;
+
+- (BaseNaviBar *)drawTopNaviBar;
 
 - (UITabBarItem *)createBarItemWithSelectedImg:(NSString *)selected
                                  UnSelectedImg:(NSString *)unSelected

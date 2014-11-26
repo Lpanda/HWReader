@@ -43,6 +43,10 @@ typedef enum {
 
 - (void)hideBtn:(TopBtnHideStyle)style;
 
+- (void)setBehavior:(id)behavior;
+
+- (id)getBehavior;
+
 - (void)rightBtnClick;
 
 - (void)leftBtnClick;

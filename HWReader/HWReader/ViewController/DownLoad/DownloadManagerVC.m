@@ -28,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.naviBar setBehavior:[NSNumber numberWithInt:downloadStatus]];
+    
     [self.tableSource addObjectsFromArray:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
 }
 
@@ -37,12 +40,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)drawTopNaviBar{
-    SegmentedNaviBar *naviBar = [[SegmentedNaviBar alloc]initWithDelegate:self HideBtn:Right
-                                                                 Segments:@[@"正在下载",@"下载历史"]];
+- (BaseNaviBar *)drawTopNaviBar{
     downloadStatus = Downloading;
-    [naviBar setDefaultIndex:downloadStatus];
-    [self.view addSubview:naviBar];
+    return [[SegmentedNaviBar alloc]initWithDelegate:self HideBtn:Right
+                                                                Segments:@[@"正在下载",@"下载历史"]];
 }
 
 # pragma mark 按钮方法

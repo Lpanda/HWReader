@@ -56,6 +56,18 @@
     
 }
 
+-(void)setTitle:(NSString *)title{
+    [pullDownBtn setTitle:title forState:UIControlStateNormal];
+}
+
+-(void)setBehavior:(id)behavior{
+    [pullDownBtn setTitle:behavior forState:UIControlStateNormal];
+}
+
+-(id)getBehavior{
+    return pullDownBtn;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

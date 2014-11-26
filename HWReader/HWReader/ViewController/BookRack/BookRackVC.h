@@ -14,5 +14,8 @@ static const CGFloat  bookrackCellHeight = 90;
 
 @interface BookRackVC : BaseTableVC
 
+- (void)bookClick:(NSNotification *)notifi;
+
+- (void)pushNextVC;
 
 @end

@@ -13,8 +13,7 @@
 
 @implementation BookView
 
-@synthesize nameLB;
-@synthesize delegate = _delegate;
+@synthesize nameLB = _nameLB;
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -25,20 +24,21 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        self.userInteractionEnabled = YES;
+        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(hideSelf) name:@"HideBookRackView" object:nil];
         
         self.image = [UIImage imageNamed:BOOKBG];
         
-        self.nameLB = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        nameLB.backgroundColor = [UIColor clearColor];
-        nameLB.numberOfLines = ZEROLINE;
-        nameLB.lineBreakMode = NSLineBreakByCharWrapping;
-        nameLB.font = [UIFont systemFontOfSize:14.0f];
-        [self addSubview:nameLB];
+        _nameLB = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        _nameLB.backgroundColor = [UIColor clearColor];
+        _nameLB.numberOfLines = ZEROLINE;
+        _nameLB.lineBreakMode = NSLineBreakByCharWrapping;
+        _nameLB.font = [UIFont systemFontOfSize:14.0f];
+        [self addSubview:_nameLB];
         
-        UIButton *clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        clickBtn.frame = self.bounds;
+        clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         clickBtn.backgroundColor = [UIColor clearColor];
         [clickBtn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:clickBtn];
@@ -47,7 +47,7 @@
 }
 
 -(void)btnAction{
-    [_delegate bookClick];
+    [[NSNotificationCenter defaultCenter] postNotificationName:BOOKCLICKNOTIFI object:@""];
 }
 
 -(void)hideSelf{
@@ -56,7 +56,8 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    nameLB.frame = CGRectMake(NAMELB_ORIGNX, 0, SELF_WIDTH - NAMELB_ORIGNX, SELF_HEIGHT);
+    _nameLB.frame = CGRectMake(NAMELB_ORIGNX, 0, SELF_WIDTH - NAMELB_ORIGNX, SELF_HEIGHT);
+    clickBtn.frame = self.bounds;
 }
 
 /*

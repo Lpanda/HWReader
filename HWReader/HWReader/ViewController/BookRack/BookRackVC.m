@@ -26,7 +26,6 @@ static const NSInteger COL_LENGTH = 3;
 
 @interface BookRackVC (){
     UIView *pullDownView;
-    PullDownNaviBar *naviBar;
     NSMutableArray *sysTexts;
     BOOL    isListShow;
 }
@@ -37,10 +36,10 @@ static const NSInteger COL_LENGTH = 3;
 
 @implementation BookRackVC
 
-
--(id)init{
+-(instancetype)init{
     if (self = [super init]) {
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(bookClick:) name:BOOKCLICKNOTIFI object:nil];
     }
     
     return self;
@@ -59,10 +58,10 @@ static const NSInteger COL_LENGTH = 3;
 
 # pragma mark 视图层
 
-- (void)drawTopNaviBar{
-    naviBar = [[PullDownNaviBar alloc]initWithDelegate:self HideBtn:Left Title:@"全部制式"];
-    [naviBar.rightBtn setBackgroundImage:[UIImage imageNamed:SWITCH_LIST] forState:UIControlStateNormal];
-    [self.view addSubview:naviBar];
+- (BaseNaviBar *)drawTopNaviBar{
+    PullDownNaviBar *pullDownBar = [[PullDownNaviBar alloc]initWithDelegate:self HideBtn:Left Title:@"全部制式"];
+    [pullDownBar.rightBtn setBackgroundImage:[UIImage imageNamed:SWITCH_LIST] forState:UIControlStateNormal];
+    return pullDownBar;
 }
 
 - (void)drawBarItem{
@@ -79,7 +78,7 @@ static const NSInteger COL_LENGTH = 3;
     
     pullDownView = [[UIView alloc]initWithFrame:
                     CGRectMake(PULLDOWNVIEW_ORIGNX,
-                               naviBar.bounds.size.height - 18,
+                               self.naviBar.bounds.size.height - 18,
                                PULLDOWNVIEW_WIDTH,
                                PULLDOWNSELECTBTN_HEIGHT * sysTexts.count)];
     pullDownView.backgroundColor = [UIColor blackColor];
@@ -105,10 +104,12 @@ static const NSInteger COL_LENGTH = 3;
 }
 
 - (void)choosDocSys:(UIButton*)sysBtn{
-    NSString *lastTitle = naviBar.pullDownBtn.titleLabel.text;
+    UIButton *pulldownBtn = [self.naviBar getBehavior];
+    NSString *lastTitle = pulldownBtn.titleLabel.text;
     
     if (![lastTitle isEqualToString:sysBtn.titleLabel.text]) {
-        [naviBar.pullDownBtn setTitle:sysBtn.titleLabel.text forState:UIControlStateNormal];
+        [self.naviBar setBehavior:sysBtn.titleLabel.text];
+        //[naviBar.pullDownBtn setTitle:sysBtn.titleLabel.text forState:UIControlStateNormal];
     }
     pullDownView.hidden = YES;
     
@@ -117,10 +118,10 @@ static const NSInteger COL_LENGTH = 3;
 -(void)rightBtnAction{
     isListShow = !isListShow;
     if (isListShow) {
-        [naviBar.rightBtn setBackgroundImage:[UIImage imageNamed:SWITCH_BOOKRACK]
+        [self.naviBar.rightBtn setBackgroundImage:[UIImage imageNamed:SWITCH_BOOKRACK]
                                     forState:UIControlStateNormal];
     }else{
-        [naviBar.rightBtn setBackgroundImage:[UIImage imageNamed:SWITCH_LIST] forState:UIControlStateNormal];
+        [self.naviBar.rightBtn setBackgroundImage:[UIImage imageNamed:SWITCH_LIST] forState:UIControlStateNormal];
     }
     [self.tableView reloadData];
 }
@@ -140,8 +141,9 @@ static const NSInteger COL_LENGTH = 3;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    PacketVC *packetVC = [[PacketVC alloc]init];
-    [self.navigationController pushViewController:packetVC animated:YES];
+    if (isListShow) {
+        [self pushNextVC];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -165,6 +167,8 @@ static const NSInteger COL_LENGTH = 3;
         [cell clearContentView];
     }
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     if (isListShow) {
         cell.textLabel.text = self.tableSource[indexPath.row];
     }else{
@@ -178,6 +182,17 @@ static const NSInteger COL_LENGTH = 3;
     }
     
     return cell;
+}
+
+- (void)bookClick:(NSNotification *)notifi{
+    if (self == [self.navigationController.viewControllers lastObject]) {
+        [self pushNextVC];
+    }
+}
+
+- (void)pushNextVC{
+    PacketVC *packetVC = [[PacketVC alloc]init];
+    [self.navigationController pushViewController:packetVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

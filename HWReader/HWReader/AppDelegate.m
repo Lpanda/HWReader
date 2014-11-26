@@ -21,6 +21,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    NSString *path = [DocManager getFilePathByName:@"demo" Type:@"hhc" AndPathState:Resource];
+    TFHpple *hpple = [[TFHpple alloc]initWithHTMLData:[NSData dataWithContentsOfFile:path]];
+    NSArray *uls = [hpple searchWithXPathQuery:@"//ul"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     NSArray *controllers = [NSArray arrayWithObjects:[[BookRackVC alloc]init],[[DownloadMainVC alloc]init],

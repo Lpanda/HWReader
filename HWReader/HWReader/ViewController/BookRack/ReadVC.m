@@ -28,7 +28,6 @@
 @interface ReadVC (){
     
     FeedBackView *feedbackView;
-    NormalNaviBar *readNavi;
     UIView *handleView;
     UIInterfaceOrientation interOrtnFlag;
     NSString *curlType;
@@ -97,12 +96,12 @@
 
 # pragma mark 设置顶部导航栏及门把手
 
-- (void)drawTopNaviBar{
-    readNavi = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:None Title:@"阅读BTS3902E"];
-    readNavi.alpha = 0.0f;
-    readNavi.backgroundColor = [UIColor whiteColor];
-    [readNavi.rightBtn setImage:[UIImage imageNamed:BOOKMARK_IMG] forState:UIControlStateNormal];
-    [self.view addSubview:readNavi];
+- (BaseNaviBar *)drawTopNaviBar{
+    NormalNaviBar *readNaviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:None Title:@"阅读BTS3902E"];
+    readNaviBar.alpha = 0.0f;
+    readNaviBar.backgroundColor = [UIColor whiteColor];
+    [readNaviBar.rightBtn setImage:[UIImage imageNamed:BOOKMARK_IMG] forState:UIControlStateNormal];
+    return readNaviBar;
 }
 
 -(void)drawHandle{
@@ -188,7 +187,7 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherG
         float showType[2] = {0.0f, 0.7f};
         BOOL isShow = !_editBar.alpha;
         _editBar.alpha = showType[isShow];
-        readNavi.alpha = (double)!readNavi.alpha;
+        self.naviBar.alpha = (double)!self.naviBar.alpha;
         _changeFontView.hidden = YES;
     }];
 }

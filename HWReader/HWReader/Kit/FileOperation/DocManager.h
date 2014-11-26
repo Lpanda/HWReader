@@ -35,6 +35,9 @@ typedef enum {
 
 //  从工程指定目录中获取文件路径
 + (NSString *)getFilePathByName:(NSString *)fileName AndPathState:(FilePathState)pathState;
++ (NSString *)getFilePathByName:(NSString *)fileName Type:(NSString *)type
+                       AndPathState:(FilePathState)pathState;
+
 
 //  获取所有需要解压的文件名数组
 + (NSMutableArray *)getAllZipFiles;

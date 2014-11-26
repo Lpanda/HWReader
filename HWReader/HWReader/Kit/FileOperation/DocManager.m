@@ -85,18 +85,26 @@ static NSFileManager *fileManager;
 
 # pragma mark 通过文件名，获取指定目录下的文件路径
 + (NSString *)getFilePathByName:(NSString *)fileName AndPathState:(FilePathState)pathState{
+    return [[self class] getFilePathByName:fileName Type:@"zip" AndPathState:pathState];
+}
+
++ (NSString *)getFilePathByName:(NSString *)fileName Type:(NSString *)type
+                   AndPathState:(FilePathState)pathState
+{
+    if ([fileName isEmptyOrNull]) {
+        return nil;
+    }
     
     NSString *filePath = nil;
     
     if (pathState == Resource) {
-        filePath = [[NSBundle mainBundle]pathForResource:fileName ofType:@"zip"];
+        filePath = [[NSBundle mainBundle]pathForResource:fileName ofType:type];
     }else{
         filePath = [NSString stringWithFormat:@"%@/%@",
                     [self getFolderPathFromDocmentPathByFileState:UNZIP],fileName];
     }
     
     return filePath;
-    
 }
 
 # pragma mark 获取所有压缩文件路径

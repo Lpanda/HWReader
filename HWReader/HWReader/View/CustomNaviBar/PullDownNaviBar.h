@@ -14,4 +14,6 @@
 @property (strong,  nonatomic)  UIButton *pullDownBtn;
 @property (strong,  nonatomic)  UIImageView *pullDownArrow;
 
+- (void)setTitle:(NSString *)title;
+
 @end

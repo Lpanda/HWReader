@@ -13,9 +13,7 @@
 #define BOOKMARK_SELECTED    1
 
 
-@interface MenuBookmarkVC (){
-    SegmentedNaviBar    *segmentedNaviBar;
-}
+@interface MenuBookmarkVC ()
 
 @end
 
@@ -34,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    [segmentedNaviBar setDefaultIndex:MENU_SELECTED];
+    [self.naviBar setBehavior:[NSNumber numberWithInt:MENU_SELECTED]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,9 +41,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)drawTopNaviBar{
-    segmentedNaviBar = [[SegmentedNaviBar alloc]initWithDelegate:self HideBtn:Right Segments:@[@"目录",@"书签"]];
-    [self.view addSubview:segmentedNaviBar];
+- (BaseNaviBar *)drawTopNaviBar{
+    return [[SegmentedNaviBar alloc]initWithDelegate:self HideBtn:Right Segments:@[@"目录",@"书签"]];
 }
 
 - (void)naviAction:(id)sender{

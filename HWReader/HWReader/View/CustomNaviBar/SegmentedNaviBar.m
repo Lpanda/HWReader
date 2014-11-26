@@ -39,6 +39,10 @@
     return self;
 }
 
+-(void)setBehavior:(id)behavior{
+    [self setDefaultIndex:[behavior intValue]];
+}
+
 -(void)setDefaultIndex:(int)index{
     [self chooseSeg:segmentedBtn[index]];
 }

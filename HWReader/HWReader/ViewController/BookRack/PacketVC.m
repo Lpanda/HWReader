@@ -35,9 +35,8 @@
 
 }
 
-- (void)drawTopNaviBar{
-    naviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"BTS3902E"];
-    [self.view addSubview:naviBar];
+- (BaseNaviBar *)drawTopNaviBar{
+    return [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"BTS3902E"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,12 +46,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [self pushNextVC];
+}
+
+-(void)pushNextVC{
     ReadVC *readVC = [[ReadVC alloc]initWithNibName:@"ReadVC" bundle:nil];
     readVC.hidesBottomBarWhenPushed = YES;
     [self presentViewController:readVC animated:YES completion:nil];
-    //[self.navigationController pushViewController:readVC animated:YES];
+}
 
+-(void)bookClick:(NSNotification *)notifi{
+    [self pushNextVC];
 }
 
 @end

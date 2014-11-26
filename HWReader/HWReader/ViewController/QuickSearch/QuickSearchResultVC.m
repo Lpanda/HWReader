@@ -44,9 +44,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)DrawTopNaviBar{
-    NormalNaviBar *naviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"UMTS-XXX-XXX"];
-    [self.view addSubview:naviBar];
+-(BaseNaviBar *)drawTopNaviBar{
+    return [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"UMTS-XXX-XXX"];
 }
 
 -(void)leftBtnAction{

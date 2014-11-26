@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol BookViewDelegate <NSObject>
+static NSString *BOOKCLICKNOTIFI = @"BookClickNotifi";
 
-- (void)bookClick;
 
-@end
-
-@interface BookView : UIImageView
+@interface BookView : UIImageView{
+    UIButton *clickBtn;
+}
 
 @property (strong,  nonatomic)  UILabel *nameLB;
-@property (assign,  nonatomic)  id<BookViewDelegate>    delegate;
 
 @end

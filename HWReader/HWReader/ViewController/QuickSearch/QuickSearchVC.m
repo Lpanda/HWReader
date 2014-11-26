@@ -56,9 +56,8 @@ static const CGFloat SYSCHOOSEVIEW_WIDTH = 240.0f;
     // Dispose of any resources that can be recreated.
 }
 
--(void)drawTopNaviBar{
-    NormalNaviBar *naviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:All Title:@"快速搜索"];
-    [self.view addSubview:naviBar];
+-(BaseNaviBar *)drawTopNaviBar{
+    return [[NormalNaviBar alloc]initWithDelegate:self HideBtn:All Title:@"快速搜索"];
 }
 
 -(void)drawBarItem{

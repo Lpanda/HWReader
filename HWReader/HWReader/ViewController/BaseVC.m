@@ -33,7 +33,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self drawTopNaviBar];
+    _naviBar = [self drawTopNaviBar];
+    [self.view addSubview:_naviBar];
     
 }
 
@@ -43,8 +44,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)drawTopNaviBar{
-    
+- (BaseNaviBar *)drawTopNaviBar{
+    return nil;
 }
 
 -(void)drawBarItem{

@@ -22,7 +22,6 @@
 #define DOCUMENT_URL    @"url"
 
 @interface DownloadMainVC (){
-    NormalNaviBar   *naviBar;
     DownloadManagerVC   *downloadManagerVC;
     UIScrollView *scrollView;
     NSArray *sysTitles;
@@ -102,10 +101,10 @@
     return scrollView;
 }
 
--(void)drawTopNaviBar{
-    naviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Left Title:@"下载"];
-    [naviBar.rightBtn setTitle:@"管理" forState:UIControlStateNormal];
-    [self.view addSubview:naviBar];
+-(BaseNaviBar *)drawTopNaviBar{
+    NormalNaviBar *downloadNavi = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Left Title:@"下载"];
+    [downloadNavi.rightBtn setTitle:@"管理" forState:UIControlStateNormal];
+    return downloadNavi;
 }
 
 -(void)drawBarItem{

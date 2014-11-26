@@ -36,6 +36,15 @@
     titleLB.center = CGPointMake(self.center.x, TITLELB_CENTERY);
 }
 
+-(void)setBehavior:(id)behavior{
+    NSString *title = behavior;
+    titleLB.text = title;
+}
+
+-(id)getBehavior{
+    return titleLB;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
