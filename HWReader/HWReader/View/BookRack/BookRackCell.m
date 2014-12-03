@@ -44,19 +44,6 @@ static NSInteger BOOK_CNT;
     // Configure the view for the selected state
 }
 
--(void)layoutSubviews{
-    [super layoutSubviews];
-
-    for (int i = 0; i != [bookViews count]; ++ i) {
-        BookView *bookView = bookViews[i];
-        bookView.frame = CGRectMake(
-                                    BOOKVIEW_ORIGN_X(i),
-                                    BOOKVIEW_ORIGN_Y,
-                                    BOOKVIEW_WIDTH,
-                                    SELF_HEIGHT - BOOKVIEW_ORIGN_Y);
-    }
-}
-
 -(void)bookRackShow:(NSArray *)books{
     for (int i = 0; i != [books count]; ++ i) {
         BookView *tmp = bookViews[i];
@@ -75,5 +62,19 @@ static NSInteger BOOK_CNT;
 -(void)hideBookView{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"HideBookRackView" object:nil];
 }
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+    for (int i = 0; i != [bookViews count]; ++ i) {
+        BookView *bookView = bookViews[i];
+        bookView.frame = CGRectMake(
+                                    BOOKVIEW_ORIGN_X(i),
+                                    BOOKVIEW_ORIGN_Y,
+                                    BOOKVIEW_WIDTH,
+                                    SELF_HEIGHT - BOOKVIEW_ORIGN_Y);
+    }
+}
+
 
 @end

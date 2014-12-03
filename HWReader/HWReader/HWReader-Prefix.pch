@@ -49,11 +49,10 @@
         delegate:Delegate cancelButtonTitle:CancelTitle otherButtonTitles:OtherTitles, nil]show]\
 
 //     UserDefaults Keys
-#define SENDADDR    @"sendAddr"
-#define FEEDBACKADDR    @"feedBackAddr"
-#define SENDPWD @"sendPwd"
-#define USERRECEIVEADDR @"userReceiveAddr"
-#define USERNICKNAME    @"userNickName"
+//#define SENDADDR    @"sendAddr"
+//#define FEEDBACKADDR    @"feedBackAddr"
+//#define SENDPWD @"sendPwd"
+
 
 //  横竖屏切换通知
 

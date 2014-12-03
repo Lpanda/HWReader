@@ -65,7 +65,6 @@ static const NSInteger COL_LENGTH = 3;
 }
 
 - (void)drawBarItem{
-    
     self.tabBarItem= [self createBarItemWithSelectedImg:BOOKRACKICON_SELECTED
                                           UnSelectedImg:BOOKRACKICON_UNSELECTED
                                                     Tag:READ_MODULE];

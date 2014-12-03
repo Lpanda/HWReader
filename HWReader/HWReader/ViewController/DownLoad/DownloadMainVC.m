@@ -61,8 +61,11 @@
     [self.view addSubview:[self drawSysList]];
     
     downloadManagerVC = [[DownloadManagerVC alloc]init];
+    
     [self addChildViewController:downloadManagerVC];
+    
     [self.view addSubview:downloadManagerVC.view];
+    
     downloadManagerVC.view.hidden = YES;
 }
 

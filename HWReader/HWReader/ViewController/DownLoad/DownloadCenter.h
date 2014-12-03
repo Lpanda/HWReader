@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ASIHTTPRequest.h"
+#import "ASINetworkQueue.h"
 
-@interface DownloadCenter : NSObject
+@interface DownloadCenter : NSObject<ASIHTTPRequestDelegate>{
+}
+
+@property (strong,  nonatomic) ASINetworkQueue *downloadQueue;
+@property (strong,  nonatomic) NSMutableArray *downloadingList;
+@property (strong,  nonatomic) NSMutableArray *finishedList;
+
++ (DownloadCenter *)getInstance;
+
+- (void)addDownloadUrl:(NSString *)urlStr;
+
+- (void)start;
+
+- (void)stop:(ASIHTTPRequest *)request;
 
 @end

@@ -36,9 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)drawTopNaviBar{
-    NormalNaviBar *copyRightNaviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"版本信息"];
-    [self.view addSubview:copyRightNaviBar];
+-(BaseNaviBar *)drawTopNaviBar{
+    return [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"版本信息"];
 }
 
 - (void)leftBtnAction{

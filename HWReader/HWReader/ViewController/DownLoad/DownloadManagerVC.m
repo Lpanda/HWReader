@@ -28,9 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    downloadStatus = Downloading;
     [self.naviBar setBehavior:[NSNumber numberWithInt:downloadStatus]];
-    
     [self.tableSource addObjectsFromArray:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
 }
 
@@ -41,7 +40,6 @@
 }
 
 - (BaseNaviBar *)drawTopNaviBar{
-    downloadStatus = Downloading;
     return [[SegmentedNaviBar alloc]initWithDelegate:self HideBtn:Right
                                                                 Segments:@[@"正在下载",@"下载历史"]];
 }
@@ -75,17 +73,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellId = @"DownloadCellId";
-    
     DownloadCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    
     if (!cell) {
         cell = [[DownloadCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    
     downloadStatus == Downloading ? [cell showDownloadingContent] : [cell showDownloadHistory];
-    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     return cell;
 }
 
@@ -98,7 +91,6 @@
         forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableSource removeObjectAtIndex:indexPath.row];
-    
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 

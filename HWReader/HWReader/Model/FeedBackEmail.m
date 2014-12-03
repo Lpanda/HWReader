@@ -8,6 +8,10 @@
 
 #import "FeedBackEmail.h"
 
+#define SEND_ADDR    @"sendAddr"
+#define SEND_PWD @"sendPwd"
+#define FEEDBACK_ADDR    @"feedBackAddr"
+
 @implementation FeedBackEmail
 
 @synthesize user;
@@ -24,9 +28,9 @@
         _subject = subject;
         
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        self.sendAddr = [userDefaults objectForKey:@"sendAddr"];
-        self.sendPwd = [userDefaults objectForKey:@"sendPwd"];
-        self.feedBackAddr = [userDefaults objectForKey:@"feedBackAddr"];
+        self.sendAddr = [userDefaults objectForKey:SEND_ADDR];
+        self.sendPwd = [userDefaults objectForKey:SEND_PWD];
+        self.feedBackAddr = [userDefaults objectForKey:FEEDBACK_ADDR];
         self.user = [[User alloc]init];
     }
     

@@ -10,6 +10,8 @@
 #import "NormalNaviBar.h"
 
 #define CHECKEMAILFORMAT_REGULAR    @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+#define USERRECEIVEADDR @"userReceiveAddr"
+#define USERNICKNAME    @"userNickName"
 
 @interface UserSettingVC (){
     BOOL    hasBeenEdit;
@@ -58,10 +60,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)drawTopNaviBar{
-    NormalNaviBar *userSettingNaviBar = [[NormalNaviBar alloc]
-                                         initWithDelegate:self HideBtn:Right Title:@"用户信息设置"];
-    [self.view addSubview:userSettingNaviBar];
+-(BaseNaviBar *)drawTopNaviBar{
+    return  [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:@"用户信息设置"];
 }
 
 -(void)leftBtnAction{

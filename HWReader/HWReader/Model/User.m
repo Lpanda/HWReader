@@ -8,6 +8,9 @@
 
 #import "User.h"
 
+#define USERRECEIVEADDR @"userReceiveAddr"
+#define USERNICKNAME    @"userNickName"
+
 @implementation User
 
 @synthesize nickName;

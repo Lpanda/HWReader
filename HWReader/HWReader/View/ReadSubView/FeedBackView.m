@@ -44,9 +44,7 @@
 
 # pragma mark UITextView 代理
 
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
-replacementText:(NSString *)text{
-    
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         [self sendFeedbackMessage:nil];

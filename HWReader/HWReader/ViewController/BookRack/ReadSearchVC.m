@@ -46,11 +46,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    if (_curDirection == UIInterfaceOrientationPortrait) {
-        self.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-    }else{
-        self.view.frame = CGRectMake(0, 0, SCREEN_HEIGHT, SCREEN_WIDTH);
-    }
+    self.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
 - (void)didReceiveMemoryWarning

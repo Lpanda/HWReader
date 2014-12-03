@@ -11,6 +11,10 @@
 #import "UserSettingVC.h"
 #import "NormalNaviBar.h"
 
+#define SEND_ADDR    @"sendAddr"
+#define SEND_PWD @"sendPwd"
+#define FEEDBACK_ADDR    @"feedBackAddr"
+
 @interface AnotherVC ()
 
 - (IBAction)CheckVersion:(id)sender;
@@ -26,9 +30,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:@"testjavamail5566@163.com" forKey:SENDADDR];
-        [userDefaults setObject:@"wirelessdoc@huawei.com" forKey:FEEDBACKADDR];
-        [userDefaults setObject:@"testmail5566" forKey:SENDPWD];
+        [userDefaults setObject:@"testjavamail5566@163.com" forKey:SEND_ADDR];
+        [userDefaults setObject:@"wirelessdoc@huawei.com" forKey:FEEDBACK_ADDR];
+        [userDefaults setObject:@"testmail5566" forKey:SEND_PWD];
         [userDefaults synchronize];
     }
     return self;
@@ -46,9 +50,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)drawTopNaviBar{
-    NormalNaviBar *naviBar = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:All Title:@"其它"];
-    [self.view addSubview:naviBar];
+-(BaseNaviBar *)drawTopNaviBar{
+    return [[NormalNaviBar alloc]initWithDelegate:self HideBtn:All Title:@"其它"];
 }
 
 -(void)drawBarItem{

@@ -8,7 +8,6 @@
 
 #import "BookView.h"
 
-#define ZEROLINE    0
 #define NAMELB_ORIGNX   20
 
 @implementation BookView
@@ -33,7 +32,7 @@
         
         _nameLB = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         _nameLB.backgroundColor = [UIColor clearColor];
-        _nameLB.numberOfLines = ZEROLINE;
+        _nameLB.numberOfLines = 0;
         _nameLB.lineBreakMode = NSLineBreakByCharWrapping;
         _nameLB.font = [UIFont systemFontOfSize:14.0f];
         [self addSubview:_nameLB];
