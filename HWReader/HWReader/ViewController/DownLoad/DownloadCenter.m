@@ -37,19 +37,24 @@ static DownloadCenter *downloadCenter = nil;
     return downloadCenter;
 }
 
-- (void)addDownloadUrl:(NSString *)urlStr{
+- (ASIHTTPRequest *)createRequestWithUrl:(NSString *)urlStr{
     NSString *fileName = [urlStr pathExtension];
     NSString *documentPath = [DocManager getDocumentPath];
-    NSString *downloadPath = [NSString stringWithFormat:@"%@/%@",documentPath,fileName];
-    NSString *tempPath = [NSString stringWithFormat:@"%@/temp/%@",documentPath,fileName];
+    NSString *downloadDestinationPath = [NSString stringWithFormat:@"%@/%@",documentPath,fileName];
+    NSString *temporaryFileDownloadPath = [NSString stringWithFormat:@"%@/temp/%@",documentPath,fileName];
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc]initWithURL:[NSURL URLWithString:urlStr]];
     request.delegate = self;
-    [request setDownloadDestinationPath:downloadPath];
-    [request setTemporaryFileDownloadPath:tempPath];
+    [request setDownloadDestinationPath:downloadDestinationPath];
+    [request setTemporaryFileDownloadPath:temporaryFileDownloadPath];
     [request setDownloadProgressDelegate:self];
     [request setNumberOfTimesToRetryOnTimeout:2];
     [request setAllowResumeForFileDownloads:YES];//支持断点续传
     
+    return request;
+}
+
+- (void)addDownloadUrl:(NSString *)urlStr{
+    ASIHTTPRequest *request = [self createRequestWithUrl:urlStr];
     [_downloadQueue addOperation:request];
     [_downloadingList addObject:request];
 }
