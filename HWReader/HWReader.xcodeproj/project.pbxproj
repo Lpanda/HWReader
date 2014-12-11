@@ -161,6 +161,7 @@
 		18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DACC19985DB9009C8639 /* QuickSearchVC.m */; };
 		18D0DAD31998674A009C8639 /* DownloadManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadManagerVC.m */; };
 		18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD71998B30A009C8639 /* AnimationKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FFAE11A39389D00894D78 /* LoginRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -404,6 +405,8 @@
 		18D0DAD51998B2B2009C8639 /* AnimationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDefine.h; sourceTree = "<group>"; };
 		18D0DAD61998B30A009C8639 /* AnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationKit.h; sourceTree = "<group>"; };
 		18D0DAD71998B30A009C8639 /* AnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKit.m; sourceTree = "<group>"; };
+		A03FFAE01A39389D00894D78 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		A03FFAE11A39389D00894D78 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -868,6 +871,8 @@
 				1858416A19EB6E83006C0AF2 /* SysList.plist */,
 				1858417019EBD57C006C0AF2 /* TypeList.plist */,
 				1858417219EBD68D006C0AF2 /* LinkNameList.plist */,
+				A03FFAE01A39389D00894D78 /* LoginRequest.h */,
+				A03FFAE11A39389D00894D78 /* LoginRequest.m */,
 			);
 			path = DownLoad;
 			sourceTree = "<group>";
@@ -1095,6 +1100,7 @@
 				184E3B981A2D99C9004F553F /* NSHTTPCookieAdditions.m in Sources */,
 				18BA63AA19C03B57008D07F9 /* User.m in Sources */,
 				18D0DAD31998674A009C8639 /* DownloadManagerVC.m in Sources */,
+				A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */,
 				180D52C5197FB82F00B803A1 /* AppDelegate.m in Sources */,
 				18D0DACA19985DA9009C8639 /* DownloadMainVC.m in Sources */,
 				183B6EA919931BAB000CE3C8 /* MenuBookmarkVC.m in Sources */,
@@ -1211,6 +1217,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
+					"DEBUG_REQUEST_STATUS=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;

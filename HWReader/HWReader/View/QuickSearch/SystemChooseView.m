@@ -63,12 +63,5 @@ static const int TAG_OFFSET = 100;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, SELF_WIDTH, BTN_HEIGHT * systems.count);
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

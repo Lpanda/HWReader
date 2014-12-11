@@ -10,6 +10,9 @@
 #import "DownloadManagerVC.h"
 #import "NormalNaviBar.h"
 #import "DownloadLinkCell.h"
+#import "LoginRequest.h"
+#import "DownloadCenter.h"
+
 
 #define SCRLIST_WIDTH   80
 #define SYSBTN_SIZE 80
@@ -21,6 +24,11 @@
 #define DOCUMENT_NAME    @"name"
 #define DOCUMENT_URL    @"url"
 
+
+#define kLOGIN_USERNAME_KEY @"uid"
+#define kLOGIN_PASSWORD_KEY @"password"
+#define kLOGIN_URL @"https://uniportal.huawei.com/uniportal/login.do"
+
 @interface DownloadMainVC (){
     DownloadManagerVC   *downloadManagerVC;
     UIScrollView *scrollView;
@@ -28,6 +36,8 @@
     NSArray *typeTitles;
     NSDictionary *linkStructs;
     NSString *curSys;
+    LoginRequest *_loginRequest;
+    NSMutableDictionary *_loginDicForm;
 }
 
 - (UIScrollView *)drawSysList;
@@ -48,6 +58,14 @@
                      [[NSBundle mainBundle] pathForResource:@"SysList" ofType:@"plist"]];
         linkStructs = [NSDictionary dictionaryWithContentsOfFile:
                                [[NSBundle mainBundle] pathForResource:@"LinkNameList" ofType:@"plist"]];
+        _loginDicForm = [NSMutableDictionary dictionaryWithDictionary:
+                         @{kLOGIN_USERNAME_KEY : @"" ,
+                           kLOGIN_PASSWORD_KEY : @"",
+                           @"lang": @"en",
+                           @"actionFlag": @"loginAuthenticate",
+                           @"redirect": @"http://support.huawei.com/support/index.jsp?isFirstLogin=true",
+                           @"redirect_modify": @"",
+                           @"redirect_local": @""}];
     }
     return self;
 }
@@ -175,9 +193,40 @@
     return DOWNLOADCELL_HEIGHT;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self rightBtnAction];
+//这个方法是点击下载条目时单元格跳转的地方，缺少下载逻辑
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
+    if (_loginRequest.success) {
+        static NSString* DOWNLOAD_TEST_URL = @"http://download.huawei.com/dl/download.do?actionFlag=download&nid=SCL1000002427&partNo=3001&mid=SUP_PIGEON";
+        [[DownloadCenter getInstance] addDownloadUrl:DOWNLOAD_TEST_URL];
+        [[DownloadCenter getInstance] start];
+        [self rightBtnAction];
+    }
+    else{
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录" message:@"下载需要登录support"
+                                                       delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+        
+        [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // use "buttonIndex" to decide your action
+    UITextField *username = [actionSheet textFieldAtIndex:0];
+    UITextField *password = [actionSheet textFieldAtIndex:1];
+    NSLog(@"username: %@, password : %@", username.text, password.text);
+    if (![username.text isEmptyOrNull]
+        && ![password.text isEmptyOrNull]) {
+        _loginRequest = [[LoginRequest alloc] initWithUrl:[NSURL URLWithString:kLOGIN_URL]];
+        [_loginDicForm setValue:username.text forKey:kLOGIN_USERNAME_KEY];
+        [_loginDicForm setValue:password.text forKey:kLOGIN_PASSWORD_KEY];
+        _loginRequest.postForm = _loginDicForm;
+        [_loginRequest loginAsync];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -202,12 +251,6 @@
     cell.textLabel.text = [[links objectAtIndex:indexPath.row] objectForKey:DOCUMENT_NAME];
     
     return cell;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
