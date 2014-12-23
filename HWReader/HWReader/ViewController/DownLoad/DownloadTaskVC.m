@@ -6,15 +6,16 @@
 //  Copyright (c) 2014年 huawei. All rights reserved.
 //
 
-#import "DownloadManagerVC.h"
+#import "DownloadTaskVC.h"
 #import "SegmentedNaviBar.h"
 #import "DownloadCell.h"
+#import "DownloadCenter.h"
 
-@interface DownloadManagerVC ()
 
+@interface DownloadTaskVC ()
 @end
 
-@implementation DownloadManagerVC
+@implementation DownloadTaskVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +30,9 @@
 {
     [super viewDidLoad];
     downloadStatus = Downloading;
+    [(SegmentedNaviBar*)self.naviBar setDefaultIndex:0];
     [self.naviBar setBehavior:[NSNumber numberWithInt:downloadStatus]];
-    [self.tableSource addObjectsFromArray:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +79,12 @@
     if (!cell) {
         cell = [[DownloadCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
+    cell.textLabel.text = self.tableSource[indexPath.row][@"name"];
+    NSString *url = self.tableSource[indexPath.row][@"url"];
+    ASIHTTPRequest *request = [[DownloadCenter getInstance] createRequestWithUrl:url];
+    [[DownloadCenter getInstance]addDownloadRequest:request];
+    [request setDownloadProgressDelegate:cell.downloadProgress];
     downloadStatus == Downloading ? [cell showDownloadingContent] : [cell showDownloadHistory];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -103,7 +111,18 @@
 - (NSString *)tableView:(UITableView *)tableView
             titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return @"你大爷";
+    return @"删除";  
+}
+
+
+-(void)addDownloadTask: (NSDictionary *) taskDic
+{
+    [self.tableView beginUpdates];
+    [self.tableSource addObject:taskDic];
+    NSArray *arrInsertRows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:[self.tableSource count]-1 inSection:0]];
+    [self.tableView insertRowsAtIndexPaths:arrInsertRows withRowAnimation:UITableViewRowAnimationBottom];
+    [self.tableView endUpdates];
+    [[DownloadCenter getInstance]start];
 }
 
 @end

@@ -46,7 +46,6 @@
         
         _loginRequest = [[ASIFormDataRequest alloc]initWithURL:[NSURL URLWithString:kLOGIN_URL]];
         _loginRequest.delegate = self;
-        [_loginRequest setDidStartSelector:@selector(requestStart:)];
         [_loginRequest setDidFinishSelector:@selector(requestFinish:)];
         [_loginRequest setDidFailSelector:@selector(requestFailed:)];
         _supportLoginDicForm = [NSMutableDictionary dictionaryWithDictionary:
@@ -115,7 +114,7 @@
 }
 
 
--(void)popLoginDlg
+-(void)askUserToLogin
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录" message:@"下载需要登录support"
                                        delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];

@@ -20,4 +20,5 @@
 
 - (void)showDownloadingContent;
 
+@property (strong, nonatomic) UIProgressView *downloadProgress;
 @end

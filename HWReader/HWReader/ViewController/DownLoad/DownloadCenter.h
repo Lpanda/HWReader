@@ -19,10 +19,12 @@
 
 + (DownloadCenter *)getInstance;
 
-- (void)addDownloadUrl:(NSString *)urlStr;
+//- (void)addDownloadUrl:(NSString *)urlStr;
 
 - (void)start;
 
 - (void)stop:(ASIHTTPRequest *)request;
 
+- (ASIHTTPRequest *)createRequestWithUrl:(NSString *)urlStr;
+-(void)addDownloadRequest: (ASIHTTPRequest *)reqeust;
 @end

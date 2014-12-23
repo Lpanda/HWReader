@@ -7,12 +7,11 @@
 //
 
 #import "DownloadMainVC.h"
-#import "DownloadManagerVC.h"
+#import "DownloadTaskVC.h"
 #import "NormalNaviBar.h"
 #import "DownloadLinkCell.h"
 #import "LoginRequest.h"
-#import "DownloadCenter.h"
-
+#import "SegmentedNaviBar.h"
 
 #define SCRLIST_WIDTH   80
 #define SYSBTN_SIZE 80
@@ -28,7 +27,7 @@
 
 
 @interface DownloadMainVC ()<UIAlertViewDelegate>{
-    DownloadManagerVC   *downloadManagerVC;
+    DownloadTaskVC   *downloadManagerVC;
     UIScrollView *scrollView;
     NSArray *sysTitles;
     NSArray *typeTitles;
@@ -36,7 +35,7 @@
     NSString *curSys;
     BOOL isAlreadyLogin;
     LoginRequest *_loginRequest;
-    
+    BOOL isChineseLink;
 }
 
 - (UIScrollView *)drawSysList;
@@ -59,6 +58,7 @@
                                [[NSBundle mainBundle] pathForResource:@"LinkNameList" ofType:@"plist"]];
         isAlreadyLogin = NO;
         
+        isChineseLink = YES;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLoginNotification) name:kUSER_ALREADY_LOGIN_MSG object:nil];
     }
     return self;
@@ -72,12 +72,12 @@
     
     [self.view addSubview:[self drawSysList]];
     
-    downloadManagerVC = [[DownloadManagerVC alloc]init];
+    downloadManagerVC = [[DownloadTaskVC alloc]init];
     
     [self addChildViewController:downloadManagerVC];
     
     [self.view addSubview:downloadManagerVC.view];
-    
+
     downloadManagerVC.view.hidden = YES;
 }
 
@@ -117,11 +117,19 @@
 }
 
 -(BaseNaviBar *)drawTopNaviBar{
-    NormalNaviBar *downloadNavi = [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Left Title:@"下载"];
-    [downloadNavi.rightBtn setTitle:@"管理" forState:UIControlStateNormal];
-    return downloadNavi;
+    
+    SegmentedNaviBar *segNavi = [[SegmentedNaviBar alloc]initWithDelegate:self HideBtn:Left
+                                            Segments:@[@"中文",@"English"]];
+    [segNavi setDefaultIndex:0];
+    return segNavi;
 }
 
+-(void)naviAction:(id)sender
+{
+    NSNumber *senderNum = sender;
+    isChineseLink = [senderNum intValue] == 0 ;
+    [self.tableView reloadData];
+}
 -(void)drawBarItem{
     self.tabBarItem= [self createBarItemWithSelectedImg:DOWNLOADICON_SELECTED
                                           UnSelectedImg:DOWNLOADICON_UNSELECTED
@@ -190,24 +198,37 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (isAlreadyLogin) {
-        static NSString* DOWNLOAD_TEST_URL = @"http://download.huawei.com/dl/download.do?actionFlag=download&nid=SCL1000002427&partNo=3001&mid=SUP_PIGEON";
-        [[DownloadCenter getInstance] addDownloadUrl:DOWNLOAD_TEST_URL];
-        [[DownloadCenter getInstance] start];
+        //获取该单元格下载URL，添加到任务队列，切换下载任务视图
+        NSDictionary *dic = [self getCellLanguageDicAt:indexPath];
+        NSString *url = dic[@"url"];
+        if ([url isEmptyOrNull]) {
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该链接尚不能下载" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+            [alert show];
+            return;
+        }
+        [downloadManagerVC addDownloadTask:dic];
         [self rightBtnAction];
     }
     else{
         _loginRequest = [[LoginRequest alloc] init];
-        [_loginRequest popLoginDlg];
+        [_loginRequest askUserToLogin];
     }
 }
-
-
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSString *key = [self getTypeKeyInSection:section];
     return [[linkStructs objectForKey:key]count];
+}
+
+- (NSDictionary *)getCellLanguageDicAt:(NSIndexPath *)indexPath {
+    static NSString *LANG[2] = {@"en",@"cn"};
+    NSString *key = [self getTypeKeyInSection:indexPath.section];
+    NSArray *links = linkStructs[key];
+    NSDictionary *encnDic = [links objectAtIndex:indexPath.row];
+    NSString *lang = LANG[isChineseLink];
+    NSDictionary *langDic = encnDic[lang];
+    return langDic;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -222,9 +243,9 @@
         cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
     }
     
-    NSString *key = [self getTypeKeyInSection:indexPath.section];
-    NSArray *links = linkStructs[key];
-    cell.textLabel.text = [[links objectAtIndex:indexPath.row] objectForKey:DOCUMENT_NAME];
+    NSDictionary *langDic;
+    langDic = [self getCellLanguageDicAt:indexPath];
+    cell.textLabel.text = langDic[DOCUMENT_NAME];
     
     return cell;
 }
@@ -234,4 +255,5 @@
 {
     isAlreadyLogin = YES;
 }
+
 @end

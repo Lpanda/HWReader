@@ -19,6 +19,7 @@ const CGFloat LABEL_ORIGN_X = 20.0f;
 @end
 
 @implementation DownloadCell
+@synthesize downloadProgress;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -28,7 +29,7 @@ const CGFloat LABEL_ORIGN_X = 20.0f;
         downloadImgName = DOWNLOAD_STOP_RED;
         
         docNameLB = [[UILabel alloc]init];
-        docNameLB.text = @"That's a holy shit";
+        docNameLB.text = @"";
         [self addSubview:docNameLB];
         
         downloadStatusBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -38,6 +39,10 @@ const CGFloat LABEL_ORIGN_X = 20.0f;
         [downloadStatusBtn addTarget:self action:@selector(clickDownloadBtn)
                     forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:downloadStatusBtn];
+        
+        downloadProgress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+        downloadProgress.frame = CGRectMake(200, 36.5, 60, 9);
+        [self.contentView addSubview:downloadProgress];
         
     }
     return self;

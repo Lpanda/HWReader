@@ -5,457 +5,1131 @@
 	<key>Single RANMBSC</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 UMTS 产品文档 V900R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002426&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002427&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 UMTS 产品文档 V900R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002428&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002429&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 UMTS 产品文档 V900R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002430&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002431&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GU 产品文档 V900R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GU Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002420&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GU 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002421&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GU 产品文档 V900R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GU Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002422&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GU 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002423&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GU 产品文档 V900R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GU Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002424&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GU 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002425&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GSM 产品文档 V900R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002412&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002413&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GSM 产品文档 V900R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002415&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002417&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GSM 产品文档 V900R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002418&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002419&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 UMTS 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002447&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002448&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 UMTS 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002449&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002450&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 UMTS 产品文档 V100R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002451&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002452&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GU 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GU Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002440&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GU 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002441&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GU 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GU Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002442&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GU 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002443&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GU 产品文档 V100R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GU Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002440&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GU 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002445&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GSM 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002434&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002435&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GSM 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002436&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002437&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GSM 产品文档 V100R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM Product Documentation V100R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002438&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM 产品文档 V100R017C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002439&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 	</array>
 	<key>Single RANMBTS</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R010C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 	<key>UMTS RANRNC</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 UMTS 产品文档 V900R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 UMTS 产品文档 V900R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 UMTS 产品文档 V900R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 UMTS 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 UMTS 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS Product Documentation V100R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS 产品文档 V100R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 UMTS 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS Product Documentation V100R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS 产品文档 V100R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 UMTS 产品文档 V100R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS Product Documentation V100R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 UMTS 产品文档 V100R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 	<key>UMTS RANNodeB</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R010C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3812AE 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812AE Product Documentation V100R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002367&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812AE 产品文档 V100R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002365&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3812AE 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812AE Product Documentation V100R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002369&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812AE 产品文档 V100R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002368&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3812E 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812E Product Documentation V100R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002371&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812E 产品文档 V100R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002370&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3812E 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812E Product Documentation V100R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002374&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3812E 产品文档 V100R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002372&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>DBS3800 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>DBS3800 Product Documentation V100R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002376&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>DBS3800 产品文档 V100R015C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002375&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>DBS3800 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>DBS3800 Product Documentation V100R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002378&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>DBS3800 产品文档 V100R016C00</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002377&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 	</array>
 	<key>UMTS RANFeature</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>RAN15.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>RAN15.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002548&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>RAN15.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002550&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>RAN16.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>RAN16.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002554&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>RAN16.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002555&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>RAN17.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>RAN17.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002556&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>RAN17.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002557&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 	</array>
 	<key>LTE FDD RANeNodeB</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R010C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 	<key>LTE FDD RANFeature</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>eRAN6.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN6.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002563&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN6.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002564&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>eRAN7.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN7.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002565&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN7.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002566&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>eRAN8.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN8.0 Feature Documentation</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002569&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN8.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002571&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 	</array>
 	<key>LTE TDD RANeNodeB</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
-	<key>LTE TDD RANeFeature</key>
+	<key>LTE TDD RANFeature</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>eRAN6.0 LTE TDD 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN6.0 LTE TDD Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002558&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN6.0 LTE TDD 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002560&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>eRAN7.0 LTE TDD 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN7.0 LTE TDD Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002561&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>eRAN7.0 LTE TDD 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002562&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 	</array>
 	<key>GSM RANGBSC</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GSM 产品文档 V900R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM Product Documentation V900R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM 产品文档 V900R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GSM 产品文档 V900R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM Product Documentation V900R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM 产品文档 V900R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6900 GSM 产品文档 V900R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM Product Documentation V900R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6900 GSM 产品文档 V900R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GSM 产品文档 V100R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM Product Documentation V100R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM 产品文档 V100R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GSM 产品文档 V100R016C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM Product Documentation V100R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM 产品文档 V100R016C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BSC6910 GSM 产品文档 V100R017C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM Product Documentation V100R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BSC6910 GSM 产品文档 V100R017C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 	<key>GSM RANGBTS</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R010C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R010C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 	<key>GSM RANFeature</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>GBSS15.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>GBSS15.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002572&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>GBSS15.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002573&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>GBSS16.0 特性文档</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>GBSS16.0 Feature Documentation </string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002574&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>GBSS16.0 特性文档</string>
+				<key>url</key>
+				<string>http://download.huawei.com/dl/download.do?actionFlag=download&amp;nid=SCL1000002576&amp;partNo=3001&amp;mid=SUP_PIGEON</string>
+			</dict>
 		</dict>
 	</array>
 	<key>Small CellMicro</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>BTS3202E 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3202E Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3202E 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3202E 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3202E Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3202E 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3203E LTE 产品文档 V100R006C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3203E LTE Product Documentation V100R006C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3203E LTE 产品文档 V100R006C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3803E WCDMA 产品文档 V200R015C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3803E WCDMA Product Documentation V200R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3803E WCDMA 产品文档 V200R015C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3902E WCDMA 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3902E WCDMA Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3902E WCDMA 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>BTS3902E WCDMA 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3902E WCDMA Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>BTS3902E WCDMA 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 	<key>Small CellLampSite</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R008C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R008C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R009C00</string>
-			<key>url</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>3900系列基站 产品文档 V100R010C00</string>
-			<key>url</key>
-			<string></string>
+			<key>en</key>
+			<dict>
+				<key>name</key>
+				<string>3900 Series Base Station Product Documentation V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>cn</key>
+			<dict>
+				<key>name</key>
+				<string>3900系列基站 产品文档 V100R009C00</string>
+				<key>url</key>
+				<string></string>
+			</dict>
 		</dict>
 	</array>
 </dict>

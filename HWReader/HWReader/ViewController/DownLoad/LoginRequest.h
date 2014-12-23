@@ -11,6 +11,5 @@
 @interface LoginRequest : NSObject
 @property (nonatomic, strong) NSDictionary *postForm;
 @property (nonatomic, assign,getter = isSuccess) BOOL success;
--(void)loginAsync;
--(void)popLoginDlg;
+-(void)askUserToLogin;
 @end

@@ -13,8 +13,10 @@ typedef enum {
     Completed
 }DownloadStatus;
 
-@interface DownloadManagerVC : BaseTableVC{
+@interface DownloadTaskVC : BaseTableVC{
     DownloadStatus  downloadStatus;
 }
+
+-(void)addDownloadTask: (NSDictionary *) taskDic;
 
 @end

@@ -22,7 +22,8 @@ static DownloadCenter *downloadCenter = nil;
         _finishedList = [[NSMutableArray alloc]init];
         _downloadingList = [[NSMutableArray alloc]init];
         _downloadQueue = [[ASINetworkQueue alloc]init];
-        _downloadQueue.maxConcurrentOperationCount = 1;
+        _downloadQueue.maxConcurrentOperationCount = 5;
+        [_downloadQueue setShowAccurateProgress:YES]; // 进度精确显示
     }
     
     return self;
@@ -44,6 +45,7 @@ static DownloadCenter *downloadCenter = nil;
     //NSString *temporaryFileDownloadPath = [NSString stringWithFormat:@"%@/temp/%@",documentPath,fileName];
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc]initWithURL:[NSURL URLWithString:urlStr]];
     request.delegate = self;
+    request.showAccurateProgress = YES;
     [request setDefaultResponseEncoding:NSUTF8StringEncoding];
     [request setDownloadDestinationPath:downloadDestinationPath];
     //[request setTemporaryFileDownloadPath:temporaryFileDownloadPath];
@@ -56,12 +58,12 @@ static DownloadCenter *downloadCenter = nil;
     return request;
 }
 
-- (void)addDownloadUrl:(NSString *)urlStr{
-    ASIHTTPRequest *request = [self createRequestWithUrl:urlStr];
-    
-    [_downloadQueue addOperation:request];
-    [_downloadingList addObject:request];
+-(void)addDownloadRequest: (ASIHTTPRequest *)reqeust
+{
+    [_downloadQueue addOperation:reqeust];
+    [_downloadingList addObject:reqeust];
 }
+
 
 - (void)start{
     [_downloadQueue go];
