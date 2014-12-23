@@ -159,7 +159,7 @@
 		18C60463199B523F00E7A204 /* AnotherVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C60461199B523F00E7A204 /* AnotherVC.xib */; };
 		18D0DACA19985DA9009C8639 /* DownloadMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAC919985DA9009C8639 /* DownloadMainVC.m */; };
 		18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DACC19985DB9009C8639 /* QuickSearchVC.m */; };
-		18D0DAD31998674A009C8639 /* DownloadManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadManagerVC.m */; };
+		18D0DAD31998674A009C8639 /* DownloadTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadTaskVC.m */; };
 		18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD71998B30A009C8639 /* AnimationKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FFAE11A39389D00894D78 /* LoginRequest.m */; };
 /* End PBXBuildFile section */
@@ -400,8 +400,8 @@
 		18D0DAC919985DA9009C8639 /* DownloadMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadMainVC.m; sourceTree = "<group>"; };
 		18D0DACB19985DB9009C8639 /* QuickSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSearchVC.h; sourceTree = "<group>"; };
 		18D0DACC19985DB9009C8639 /* QuickSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSearchVC.m; sourceTree = "<group>"; };
-		18D0DAD11998674A009C8639 /* DownloadManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerVC.h; sourceTree = "<group>"; };
-		18D0DAD21998674A009C8639 /* DownloadManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManagerVC.m; sourceTree = "<group>"; };
+		18D0DAD11998674A009C8639 /* DownloadTaskVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTaskVC.h; sourceTree = "<group>"; };
+		18D0DAD21998674A009C8639 /* DownloadTaskVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTaskVC.m; sourceTree = "<group>"; };
 		18D0DAD51998B2B2009C8639 /* AnimationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDefine.h; sourceTree = "<group>"; };
 		18D0DAD61998B30A009C8639 /* AnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationKit.h; sourceTree = "<group>"; };
 		18D0DAD71998B30A009C8639 /* AnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKit.m; sourceTree = "<group>"; };
@@ -866,8 +866,8 @@
 				18D0DAC819985DA9009C8639 /* DownloadMainVC.h */,
 				18D0DAC919985DA9009C8639 /* DownloadMainVC.m */,
 				183CDBE519E90BCD0083382A /* DownLoadMainVC.xib */,
-				18D0DAD11998674A009C8639 /* DownloadManagerVC.h */,
-				18D0DAD21998674A009C8639 /* DownloadManagerVC.m */,
+				18D0DAD11998674A009C8639 /* DownloadTaskVC.h */,
+				18D0DAD21998674A009C8639 /* DownloadTaskVC.m */,
 				1858416A19EB6E83006C0AF2 /* SysList.plist */,
 				1858417019EBD57C006C0AF2 /* TypeList.plist */,
 				1858417219EBD68D006C0AF2 /* LinkNameList.plist */,
@@ -1099,7 +1099,7 @@
 				18BA639119C026E5008D07F9 /* Base64Transcoder.m in Sources */,
 				184E3B981A2D99C9004F553F /* NSHTTPCookieAdditions.m in Sources */,
 				18BA63AA19C03B57008D07F9 /* User.m in Sources */,
-				18D0DAD31998674A009C8639 /* DownloadManagerVC.m in Sources */,
+				18D0DAD31998674A009C8639 /* DownloadTaskVC.m in Sources */,
 				A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */,
 				180D52C5197FB82F00B803A1 /* AppDelegate.m in Sources */,
 				18D0DACA19985DA9009C8639 /* DownloadMainVC.m in Sources */,
