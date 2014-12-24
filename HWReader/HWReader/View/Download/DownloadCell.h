@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-
+#import "ASIHTTPRequest.h"
 
 @interface DownloadCell : UITableViewCell{
     UILabel *docNameLB;
@@ -21,4 +21,5 @@
 - (void)showDownloadingContent;
 
 @property (strong, nonatomic) UIProgressView *downloadProgress;
+@property (copy, nonatomic) ASIHTTPRequest* request;
 @end

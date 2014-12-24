@@ -25,6 +25,6 @@
 
 - (void)stop:(ASIHTTPRequest *)request;
 
-- (ASIHTTPRequest *)createRequestWithUrl:(NSString *)urlStr;
+- (ASIHTTPRequest *)createRequestWithTaskDic:(NSDictionary *)taskDic;
 -(void)addDownloadRequest: (ASIHTTPRequest *)reqeust;
 @end

@@ -8,7 +8,6 @@
 
 #import "DownloadCenter.h"
 #import "DocManager.h"
-
 static DownloadCenter *downloadCenter = nil;
 
 @implementation DownloadCenter
@@ -38,18 +37,25 @@ static DownloadCenter *downloadCenter = nil;
     return downloadCenter;
 }
 
-- (ASIHTTPRequest *)createRequestWithUrl:(NSString *)urlStr{
-    NSString *fileName =@"test.zip";
-    NSString *documentPath = [DocManager getDocumentPath];
-    NSString *downloadDestinationPath = [NSString stringWithFormat:@"%@/%@",documentPath,fileName];
-    //NSString *temporaryFileDownloadPath = [NSString stringWithFormat:@"%@/temp/%@",documentPath,fileName];
-    ASIHTTPRequest *request = [[ASIHTTPRequest alloc]initWithURL:[NSURL URLWithString:urlStr]];
+- (ASIHTTPRequest *)createRequestWithTaskDic:(NSDictionary *)taskDic{
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSLog(@"document path: %@", path);
+    //下载路径
+    NSString *bookName = taskDic[@"name"];
+    NSString *downloadPath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.zip",bookName]];
+    NSString *tmpName = [NSString  stringWithFormat:@"tmp%@.zip",bookName];
+    //要支持断点续传，缓存路径是不能少的。
+    
+    NSString *tempPath = [path stringByAppendingPathComponent:tmpName];
+    
+    ASIHTTPRequest *request = [[ASIHTTPRequest alloc]initWithURL:[NSURL URLWithString:taskDic[@"url"]]];
     request.delegate = self;
     request.showAccurateProgress = YES;
     [request setDefaultResponseEncoding:NSUTF8StringEncoding];
-    [request setDownloadDestinationPath:downloadDestinationPath];
-    //[request setTemporaryFileDownloadPath:temporaryFileDownloadPath];
+    [request setDownloadDestinationPath:downloadPath];
+    [request setTemporaryFileDownloadPath:tempPath];
     [request setDidFinishSelector:@selector(downloadFinished:)];
+    [request setDidStartSelector:@selector(downloadStart:)];
     [request setDownloadProgressDelegate:self];
     [request setNumberOfTimesToRetryOnTimeout:2];
     [request setShouldContinueWhenAppEntersBackground:YES];
@@ -57,6 +63,7 @@ static DownloadCenter *downloadCenter = nil;
     
     return request;
 }
+
 
 -(void)addDownloadRequest: (ASIHTTPRequest *)reqeust
 {
@@ -73,9 +80,18 @@ static DownloadCenter *downloadCenter = nil;
     [request cancel];
 }
 
+-(void)downloadStart: (ASIHTTPRequest*)req
+{
+    NSLog(@"down load start, destinationPath : %@\n tmpPath: %@",
+          req.downloadDestinationPath, req.temporaryFileDownloadPath);
+}
+
 -(void)downloadFinished :(ASIHTTPRequest *)req
 {
-    NSLog(@"%@", req.downloadDestinationPath);
+    //准备开始解压，解析出hhc，hhp写到书架上
+    NSLog(@"download finished , file at: %@", req.downloadDestinationPath);
+    NSLog(@"======unzipping======");
+    
 }
 
 - (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders {

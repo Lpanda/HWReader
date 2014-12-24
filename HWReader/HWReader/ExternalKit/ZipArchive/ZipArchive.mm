@@ -10,7 +10,8 @@
 #import "ZipArchive.h"
 #import "zlib.h"
 #import "zconf.h"
-
+#import "zip.h"
+#import "unzip.h"
 
 
 @interface ZipArchive (Private)

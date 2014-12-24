@@ -19,7 +19,10 @@ const CGFloat LABEL_ORIGN_X = 20.0f;
 @end
 
 @implementation DownloadCell
+
 @synthesize downloadProgress;
+@synthesize request;
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -66,8 +69,12 @@ const CGFloat LABEL_ORIGN_X = 20.0f;
 
 - (void)clickDownloadBtn{
     if ([downloadImgName isEqualToString:DOWNLOAD_STOP_RED]) {
+        //用户点击了暂停，那暂停下载，把图标变成开始
+        [self.request clearDelegatesAndCancel];
         downloadImgName = DOWNLOAD_BEGIN_RED;
     }else{
+        //用户点击开始，那继续，图标变暂停
+        [request startAsynchronous];
         downloadImgName = DOWNLOAD_STOP_RED;
     }
     

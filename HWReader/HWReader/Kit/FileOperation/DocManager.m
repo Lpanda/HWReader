@@ -14,7 +14,9 @@
 
 static  NSString *localPlistName = @"LocalBook";
 static NSFileManager *fileManager;
+@interface DocManager ()<ZipArchiveDelegate>
 
+@end
 @implementation DocManager
 
 # pragma mark 获取document路径
@@ -177,4 +179,52 @@ static NSFileManager *fileManager;
     
 }
 
++(void)unzipFile:(NSString *)zipFilePath toDestinationPath: (NSString*) destinationPath
+{
+    ZipArchive *zipArchive = [[ZipArchive alloc]init];
+
+    ZipArchiveProgressUpdateBlock progressBlock = ^(int percentage, int filesProcessed, unsigned long numFiles)
+    {
+        NSLog(@"total %d, filesProcessed %d of %lu", percentage, filesProcessed, numFiles);
+    };
+    
+    zipArchive.progressBlock = progressBlock;
+    
+    NSString *unZipFolderPath = [self getFolderPathFromDocmentPathByFileState:UNZIP];
+    
+    NSString *zipFileName = [[zipFilePath componentsSeparatedByString:@"/"] lastObject];
+    
+    zipFileName = [[zipFileName componentsSeparatedByString:@"."] firstObject];
+    
+    NSString *unZipPath = [NSString stringWithFormat:@"%@/%@",unZipFolderPath,zipFileName];
+    
+    [zipArchive UnzipOpenFile:zipFilePath];
+    
+    //unzip file to
+    BOOL ret = [zipArchive UnzipFileTo:unZipPath overWrite:YES];
+    if (ret) {
+          NSLog(@"unZip File to unZipPath Successed!!");
+    }else{
+            NSLog(@"unZip File to unZipPath Failed!!");
+    }
+//
+//    if (![fileManager fileExistsAtPath:unZipPath]) {
+//        [fileManager createDirectoryAtPath:unZipPath withIntermediateDirectories:YES attributes:nil error:nil];
+//    }
+//    
+//    if (![fileManager fileExistsAtPath:unZipPath]) {
+//        if ([zipArchive UnzipOpenFile:zipFilePath]) {
+//            BOOL ret = [zipArchive UnzipFileTo:unZipPath overWrite:YES];
+//            if (ret) {
+//                NSLog(@"unZip File to unZipPath Successed!!");
+//            }else{
+//                NSLog(@"unZip File to unZipPath Failed!!");
+//            }
+//        }
+//    }else{
+//        NSLog(@"unZip File Already Exist!!");
+//    }
+
+    [zipArchive UnzipCloseFile];
+}
 @end

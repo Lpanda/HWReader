@@ -46,4 +46,7 @@ typedef enum {
 + (void)unZipFiles;
 
 
++(void)unzipFile:(NSString *)zipFilePath
+        toDestinationPath: (NSString*) destinationPath;
+
 @end

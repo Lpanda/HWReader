@@ -81,10 +81,11 @@
     }
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
     cell.textLabel.text = self.tableSource[indexPath.row][@"name"];
-    NSString *url = self.tableSource[indexPath.row][@"url"];
-    ASIHTTPRequest *request = [[DownloadCenter getInstance] createRequestWithUrl:url];
+    NSDictionary *taskDic = self.tableSource[indexPath.row];
+    ASIHTTPRequest *request = [[DownloadCenter getInstance] createRequestWithTaskDic: taskDic];
     [[DownloadCenter getInstance]addDownloadRequest:request];
     [request setDownloadProgressDelegate:cell.downloadProgress];
+    cell.request = request;
     downloadStatus == Downloading ? [cell showDownloadingContent] : [cell showDownloadHistory];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

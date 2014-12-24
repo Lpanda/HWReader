@@ -22,10 +22,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSString *path = [DocManager getFilePathByName:@"demo" Type:@"hhc" AndPathState:Resource];
-    TFHpple *hpple = [[TFHpple alloc]initWithHTMLData:[NSData dataWithContentsOfFile:path]];
-    NSArray *uls = [hpple searchWithXPathQuery:@"//ul"];
-    
+//    NSString *path = [DocManager getFilePathByName:@"demo" Type:@"hhc" AndPathState:Resource];
+//    TFHpple *hpple = [[TFHpple alloc]initWithHTMLData:[NSData dataWithContentsOfFile:path]];
+//    NSArray *uls = [hpple searchWithXPathQuery:@"//ul"];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            [DocManager unzipFile:@"/Users/zhaochao/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/A40BE93B-A8A9-47C7-BDA7-7F31809A071A/Documents/BSC6900 UMTS 产品文档 V900R015C00.zip" toDestinationPath:nil];
+    });
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     NSArray *controllers = [NSArray arrayWithObjects:[[BookRackVC alloc]init],[[DownloadMainVC alloc]init],
