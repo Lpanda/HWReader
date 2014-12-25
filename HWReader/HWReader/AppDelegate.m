@@ -16,7 +16,6 @@
 #import "ChmParser.h"
 #import "HHCParser.h"
 
-#import "HTMLParser.h"
 
 #define HHC_TEST_PATH @"/Users/zhaochao/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/A40BE93B-A8A9-47C7-BDA7-7F31809A071A/Documents/unZipFiles/BSC6900 UMTS 产品文档 V900R015C00/bsc6900-documents--new-15.0-ZH-app/bsc6900-documents--new-15.0.hhc"
 @implementation AppDelegate

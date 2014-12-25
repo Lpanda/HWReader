@@ -164,8 +164,6 @@
 		A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FFAE11A39389D00894D78 /* LoginRequest.m */; };
 		A041CA6E1A4BE37D004B7D69 /* HHCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA6D1A4BE37D004B7D69 /* HHCNode.m */; };
 		A041CA711A4BE388004B7D69 /* HHCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA701A4BE388004B7D69 /* HHCParser.m */; };
-		A080AB4A1A4ABA7400A09C5E /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A080AB471A4ABA7400A09C5E /* HTMLNode.m */; };
-		A080AB4B1A4ABA7400A09C5E /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A080AB491A4ABA7400A09C5E /* HTMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -415,10 +413,6 @@
 		A041CA6D1A4BE37D004B7D69 /* HHCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCNode.m; sourceTree = "<group>"; };
 		A041CA6F1A4BE388004B7D69 /* HHCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCParser.h; sourceTree = "<group>"; };
 		A041CA701A4BE388004B7D69 /* HHCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCParser.m; sourceTree = "<group>"; };
-		A080AB461A4ABA7400A09C5E /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
-		A080AB471A4ABA7400A09C5E /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
-		A080AB481A4ABA7400A09C5E /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
-		A080AB491A4ABA7400A09C5E /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -611,7 +605,6 @@
 		180D5310197FB93600B803A1 /* ExternalKit */ = {
 			isa = PBXGroup;
 			children = (
-				A080AB451A4ABA7400A09C5E /* HTMLParser */,
 				18BA638619C026E5008D07F9 /* SKSMTPMessage */,
 				180D5311197FB93600B803A1 /* Hpple */,
 				180D531A197FB93600B803A1 /* ZipArchive */,
@@ -942,17 +935,6 @@
 			name = HHCParser;
 			sourceTree = "<group>";
 		};
-		A080AB451A4ABA7400A09C5E /* HTMLParser */ = {
-			isa = PBXGroup;
-			children = (
-				A080AB461A4ABA7400A09C5E /* HTMLNode.h */,
-				A080AB471A4ABA7400A09C5E /* HTMLNode.m */,
-				A080AB481A4ABA7400A09C5E /* HTMLParser.h */,
-				A080AB491A4ABA7400A09C5E /* HTMLParser.m */,
-			);
-			path = HTMLParser;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1186,9 +1168,7 @@
 				18BA63A419C0290C008D07F9 /* DocParser.m in Sources */,
 				18BA639219C026E5008D07F9 /* HSK_CFUtilities.m in Sources */,
 				183B6EA21993150D000CE3C8 /* PacketVC.m in Sources */,
-				A080AB4A1A4ABA7400A09C5E /* HTMLNode.m in Sources */,
 				182CA9B419D106EB00E7B45E /* FeedBackView.m in Sources */,
-				A080AB4B1A4ABA7400A09C5E /* HTMLParser.m in Sources */,
 				183B6EA01993150D000CE3C8 /* BookRackVC.m in Sources */,
 				180D52FE197FB92400B803A1 /* NaviBarFactory.m in Sources */,
 			);
