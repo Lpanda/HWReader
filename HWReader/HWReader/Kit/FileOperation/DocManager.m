@@ -71,6 +71,14 @@ static NSFileManager *fileManager;
 }
 
 # pragma mark 通过plist文件获取其中保存的文件名
++(NSMutableArray*)getLocalBooks
+{
+    NSMutableArray *books = [NSArray arrayWithContentsOfFile:
+                              [[NSBundle mainBundle] pathForResource:localPlistName  ofType: @"plist"]];
+    NSLog(@"%@", books);
+    return books;
+}
+
 + (NSMutableArray*)getZipFileNamesByPlistName:(NSString *)plistName{
     
     NSDictionary *zipFiles = [NSDictionary dictionaryWithContentsOfFile:
@@ -181,8 +189,13 @@ static NSFileManager *fileManager;
 
 +(void)unzipFile:(NSString *)zipFilePath toDestinationPath: (NSString*) destinationPath
 {
-    ZipArchive *zipArchive = [[ZipArchive alloc]init];
 
+}
+
++(NSString*) unzipFileToDefaulfFloder:(NSString*) zipFilePath
+{
+    ZipArchive *zipArchive = [[ZipArchive alloc]init];
+    
     ZipArchiveProgressUpdateBlock progressBlock = ^(int percentage, int filesProcessed, unsigned long numFiles)
     {
         NSLog(@"total %d, filesProcessed %d of %lu", percentage, filesProcessed, numFiles);
@@ -203,28 +216,63 @@ static NSFileManager *fileManager;
     //unzip file to
     BOOL ret = [zipArchive UnzipFileTo:unZipPath overWrite:YES];
     if (ret) {
-          NSLog(@"unZip File to unZipPath Successed!!");
+        NSLog(@"unZip File to unZipPath Successed!!");
     }else{
-            NSLog(@"unZip File to unZipPath Failed!!");
+        NSLog(@"unZip File to unZipPath Failed!!");
     }
-//
-//    if (![fileManager fileExistsAtPath:unZipPath]) {
-//        [fileManager createDirectoryAtPath:unZipPath withIntermediateDirectories:YES attributes:nil error:nil];
-//    }
-//    
-//    if (![fileManager fileExistsAtPath:unZipPath]) {
-//        if ([zipArchive UnzipOpenFile:zipFilePath]) {
-//            BOOL ret = [zipArchive UnzipFileTo:unZipPath overWrite:YES];
-//            if (ret) {
-//                NSLog(@"unZip File to unZipPath Successed!!");
-//            }else{
-//                NSLog(@"unZip File to unZipPath Failed!!");
-//            }
-//        }
-//    }else{
-//        NSLog(@"unZip File Already Exist!!");
-//    }
-
     [zipArchive UnzipCloseFile];
+    return unZipPath;
+}
+
++(NSString*) findFileInFloder:(NSString*) folderPath withExtention: (NSString*) fileExt
+{
+    NSFileManager*manager =[NSFileManager defaultManager];
+    
+    NSDirectoryEnumerator *direnum;
+    
+    direnum =[manager enumeratorAtPath: folderPath];
+    
+    NSString *filename;
+    
+    //定义一个空的NSString对象，如果遍历出来的对象为nil则代表到结尾了，可以跳转循环
+    
+    while (filename = [direnum nextObject]) {
+        
+        if ([[filename pathExtension] isEqualToString: fileExt]) {
+            return filename;
+        }
+    }
+    return nil;
+}
+
++(NSString*)getHHCPathIn:(NSString*) folderPath
+{
+    NSLog(@"%@", folderPath);
+    NSString *hhcPath = nil;
+    
+    NSFileManager*manager =[NSFileManager defaultManager];
+    
+    NSDirectoryEnumerator *direnum;
+    
+    direnum =[manager enumeratorAtPath: folderPath];
+    
+    NSString *filename;
+    
+    //定义一个空的NSString对象，如果遍历出来的对象为nil则代表到结尾了，可以跳转循环
+    
+    while (filename = [direnum nextObject]) {
+
+        if ([[filename pathExtension] isEqualToString: @"jpg"]) {
+            hhcPath = filename;
+            break;
+        }
+    }
+    return hhcPath;
+}
+
++(NSString*)getHHPPathIn:(NSString*) folderPath
+{
+    NSString *hhpPath = nil;
+    return hhpPath;
 }
 @end

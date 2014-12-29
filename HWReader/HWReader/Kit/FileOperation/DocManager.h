@@ -49,4 +49,13 @@ typedef enum {
 +(void)unzipFile:(NSString *)zipFilePath
         toDestinationPath: (NSString*) destinationPath;
 
++(NSString*)unzipFileToDefaulfFloder:(NSString*) zipFilePath;
+
++(NSString*)getHHCPathIn:(NSString*) folderPath;
+
++(NSString*)getHHPPathIn:(NSString*) folderPath;
+
++(NSMutableArray*)getLocalBooks;
+
++(NSString*) findFileInFloder:(NSString*) folderPath withExtention: (NSString*) fileExt;
 @end

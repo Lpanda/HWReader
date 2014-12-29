@@ -91,6 +91,16 @@ static DownloadCenter *downloadCenter = nil;
     //准备开始解压，解析出hhc，hhp写到书架上
     NSLog(@"download finished , file at: %@", req.downloadDestinationPath);
     NSLog(@"======unzipping======");
+    NSString* unzipPath = [DocManager unzipFileToDefaulfFloder:req.downloadDestinationPath];
+    NSString *hhcPath = [DocManager findFileInFloder:unzipPath withExtention:@"hhc"];
+    NSString *hhpPath = [DocManager findFileInFloder:unzipPath withExtention:@"hhp"];
+    NSString *hhpFileString = [NSString stringWithContentsOfFile:hhpPath encoding:NSUTF8StringEncoding error:nil];
+    NSRange titleRng = [hhpFileString rangeOfString:@"Title="];
+    if (titleRng.length) {
+       // NSRange cgRng = [hhpFileString range]
+       // NSString *bookName = [hhpFileString substringWithRange:<#(NSRange)#>]
+    }
+    //取到名字和路径  写入LocalBook.plist文件,重新加载首页表格
     
 }
 

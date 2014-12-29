@@ -47,7 +47,9 @@ static NSInteger BOOK_CNT;
 -(void)bookRackShow:(NSArray *)books{
     for (int i = 0; i != [books count]; ++ i) {
         BookView *tmp = bookViews[i];
-        tmp.nameLB.text = books[i];
+        NSDictionary *book = books[i];
+        tmp.nameLB.text = book[@"bookName"];
+        tmp.book = book;
         tmp.hidden = NO;
     }
 }

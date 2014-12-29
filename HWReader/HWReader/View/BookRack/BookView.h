@@ -16,5 +16,5 @@ static NSString *BOOKCLICKNOTIFI = @"BookClickNotifi";
 }
 
 @property (strong,  nonatomic)  UILabel *nameLB;
-
+@property (strong, nonatomic) NSDictionary *book;
 @end

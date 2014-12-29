@@ -14,15 +14,6 @@
 #define kLOGIN_URL @"https://uniportal.huawei.com/uniportal/login.do"
 
 
-
-//actionFlag:loginAuthenticate
-//lang:en
-//redirect:http://support.huawei.com/support/index.jsp?isFirstLogin=true
-//redirect_local:
-//redirect_modify:
-//uid:zwx164408
-//password:zc_123654@@@
-
 @interface LoginRequest()<UIAlertViewDelegate>
 {
     ASIFormDataRequest* _loginRequest;

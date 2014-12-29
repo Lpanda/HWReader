@@ -21,6 +21,8 @@ SKPSMTPMessageDelegate,FeedBackViewDelegate,ReadSearchVCDelegate,FeedBackViewDel
 @property (weak, nonatomic) IBOutlet UIWebView *readWebView;
 
 @property (weak, nonatomic) IBOutlet UIView *editBar;
+@property (nonatomic ,copy) NSString *baseUrl;
+@property(nonatomic, copy) NSString *url;
 
 - (IBAction)curlPage:(UIButton*)sender;
 

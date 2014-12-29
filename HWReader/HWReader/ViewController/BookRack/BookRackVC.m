@@ -7,7 +7,6 @@
 //
 
 #import "BookRackVC.h"
-#import "OutlineVC.h"
 #import "PacketVC.h"
 #import "BookRackCell.h"
 #import "DocManager.h"
@@ -28,6 +27,7 @@ static const NSInteger COL_LENGTH = 3;
     UIView *pullDownView;
     NSMutableArray *sysTexts;
     BOOL    isListShow;
+    NSArray *_books;
 }
 
 - (void)createPullDownView;
@@ -53,7 +53,7 @@ static const NSInteger COL_LENGTH = 3;
 
     [self createPullDownView];
     
-    [self.tableSource addObjectsFromArray:[DocManager getZipFileNamesByPlistName:LOCALPLIST]];
+    self.tableSource =  [DocManager getLocalBooks];
 }
 
 # pragma mark 视图层
@@ -169,9 +169,10 @@ static const NSInteger COL_LENGTH = 3;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if (isListShow) {
-        cell.textLabel.text = self.tableSource[indexPath.row];
+        cell.textLabel.text = self.tableSource[indexPath.row][@"bookName"];
+        
     }else{
-        // it is none of my business
+        //书架样式视图
         NSInteger sum = [self.tableSource count];
         NSInteger remainBkCnt =  sum -  indexPath.row *COL_LENGTH;
         NSInteger curRowBookCnt = remainBkCnt > COL_LENGTH ? COL_LENGTH : remainBkCnt;
@@ -183,15 +184,14 @@ static const NSInteger COL_LENGTH = 3;
     return cell;
 }
 
+//书架视图时，点击书本进行解析hhc ,显示大纲
 - (void)bookClick:(NSNotification *)notifi{
+    NSLog(@"get the notifycation call back ,the arg is :%@ ", notifi.object);
     if (self == [self.navigationController.viewControllers lastObject]) {
-        [self pushNextVC];
+        PacketVC *packetVC = [[PacketVC alloc]init];
+        packetVC.book = notifi.object;
+        [self.navigationController pushViewController:packetVC animated:YES];
     }
-}
-
-- (void)pushNextVC{
-    PacketVC *packetVC = [[PacketVC alloc]init];
-    [self.navigationController pushViewController:packetVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

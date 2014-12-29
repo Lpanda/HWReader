@@ -9,5 +9,5 @@
 #import "BookRackVC.h"
 
 @interface PacketVC : BookRackVC
-
+@property (nonatomic, copy) NSDictionary *book;
 @end

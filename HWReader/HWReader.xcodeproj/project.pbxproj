@@ -177,7 +177,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1800E10019D2B7CA0069F9B8 /* LocalBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocalBook.plist; sourceTree = "<group>"; };
+		1800E10019D2B7CA0069F9B8 /* LocalBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LocalBook.plist; path = ../../../Resource/LocalBook.plist; sourceTree = "<group>"; };
 		1807265919CBCDF2000B2424 /* ReadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadVC.xib; sourceTree = "<group>"; };
 		180D52B1197FB82F00B803A1 /* HWReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D52B4197FB82F00B803A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -658,7 +658,6 @@
 			children = (
 				183CDBE319E8CFB30083382A /* demo.hhc */,
 				1813D22219A32126005FC3DC /* Image */,
-				1800E10019D2B7CA0069F9B8 /* LocalBook.plist */,
 			);
 			path = Resource;
 			sourceTree = SOURCE_ROOT;
@@ -763,6 +762,7 @@
 		183B6E97199314E8000CE3C8 /* BookRack */ = {
 			isa = PBXGroup;
 			children = (
+				1800E10019D2B7CA0069F9B8 /* LocalBook.plist */,
 				183B6E9A1993150D000CE3C8 /* OutlineVC.h */,
 				183B6E9B1993150D000CE3C8 /* OutlineVC.m */,
 				183B6E981993150D000CE3C8 /* BookRackVC.h */,

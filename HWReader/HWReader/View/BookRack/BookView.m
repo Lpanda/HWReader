@@ -46,7 +46,8 @@
 }
 
 -(void)btnAction{
-    [[NSNotificationCenter defaultCenter] postNotificationName:BOOKCLICKNOTIFI object:@""];
+    NSLog(@"%click on bookview ,this will post notification: BookClickNotifi ");
+    [[NSNotificationCenter defaultCenter] postNotificationName:BOOKCLICKNOTIFI object:self.book];
 }
 
 -(void)hideSelf{

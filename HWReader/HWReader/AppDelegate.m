@@ -13,87 +13,15 @@
 #import "QuickSearchVC.h"
 #import "AnotherVC.h"
 #import "LocalizeManager.h"
-#import "ChmParser.h"
-#import "HHCParser.h"
 
 
-#define HHC_TEST_PATH @"/Users/zhaochao/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/A40BE93B-A8A9-47C7-BDA7-7F31809A071A/Documents/unZipFiles/BSC6900 UMTS 产品文档 V900R015C00/bsc6900-documents--new-15.0-ZH-app/bsc6900-documents--new-15.0.hhc"
 @implementation AppDelegate
 
 @synthesize isRotationEnabled = _isRotationEnabled;
 
-- (NSData *) toUTF8:(NSData *)sourceData
-{
-    CFStringRef gbkStr = CFStringCreateWithBytes(NULL, [sourceData bytes], [sourceData length], kCFStringEncodingGB_18030_2000, false);
-    
-    if (gbkStr == NULL) {
-        return nil;
-    }
-    else
-    {
-        NSString *gbkString = (__bridge NSString *)gbkStr;
-        
-        NSString *utf8_string = [gbkString
-                                 stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">"
-                                 withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
-        
-        return [utf8_string dataUsingEncoding:NSUTF8StringEncoding];
-        
-    }
-}
 
-
--(NSMutableArray* )testHtmlParser
-{
-    NSError *error = nil;
-    //NSData *data = []
-    NSData *htmlData = [NSData dataWithContentsOfFile:HHC_TEST_PATH];
-    htmlData = [self toUTF8:htmlData];
-    NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
-    NSArray *depIndent = @[
-                                   @"-",
-                                   @"--",
-                               @"---",
-                               @"----",
-                              @"-----",
-                              @"------",
-                               @"-------",
-                                @"--------",
-                                 @"--------",
-                               @"---------"];
-    HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
-    NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
-    NSMutableString *string = [[NSMutableString alloc]init];
-    for (HHCNode* node in nodes) {
-        NSAssert(node.name, @"error with name");
-        if (!node.children) {
-            NSAssert(node.localHref, @"no children's node must have be linked");
-        }
-        [string appendFormat:@"%@  %@->%@\n", depIndent[node.depth], node.name, node.localHref];
-    }
-    return nodes;
-    // NSLog(@"%@",string);
-}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-//    NSString *path = [DocManager getFilePathByName:@"demo" Type:@"hhc" AndPathState:Resource];
-//    TFHpple *hpple = [[TFHpple alloc]initWithHTMLData:[NSData dataWithContentsOfFile:path]];
-//    NSArray *uls = [hpple searchWithXPathQuery:@"//ul"];
-    __weak AppDelegate * weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSMutableArray *nodes = [self testHtmlParser];
-
-           // [DocManager unzipFile:@"/Users/zhaochao/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/A40BE93B-A8A9-47C7-BDA7-7F31809A071A/Documents/BSC6900 UMTS 产品文档 V900R015C00.zip" toDestinationPath:nil];
-//        NSData *htmlData = [NSData dataWithContentsOfFile:HHC_TEST_PATH];
-//        NSData *utf8Data = [self toUTF8:htmlData];
-//        
-//        TFHpple *hpple =  [[TFHpple alloc]initWithHTMLData:utf8Data];
-//        
-//        NSArray *uls = [hpple searchWithXPathQuery:@"//ul"];
-        //NSLog(@"%@", uls);
-    });
-
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     NSArray *controllers = [NSArray arrayWithObjects:[[BookRackVC alloc]init],[[DownloadMainVC alloc]init],
