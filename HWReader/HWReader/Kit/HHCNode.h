@@ -23,4 +23,5 @@
 @property (nonatomic, copy) NSMutableArray *children;
 @property (nonatomic, assign) int depth;
 -(id)initWithXmlNode:(xmlNode* ) node;
+-(NSMutableArray*) getPreOrderChilren;
 @end

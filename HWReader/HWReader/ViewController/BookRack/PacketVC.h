@@ -8,6 +8,7 @@
 
 #import "BookRackVC.h"
 #import "DDMenuController.h"
+#define HHCNODES_PARSE_DONE_NOTIFY @"HHCNODES_PARSE_DONE_NOTIFY"
 
 @interface PacketVC : BookRackVC
 @property (nonatomic, copy) NSDictionary *book;

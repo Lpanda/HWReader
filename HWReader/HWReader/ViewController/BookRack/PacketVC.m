@@ -10,13 +10,11 @@
 #import "ReadVC.h"
 #import "NormalNaviBar.h"
 #import "HHCParser.h"
-#import "OutlineVC.h"
-#import "DDMenuController.h"
+#import "HHCOutlineVC.h"
 
 @interface PacketVC (){
     NormalNaviBar *naviBar;
     NSMutableArray *_hhcNodes;
-    OutlineVC *_outlineVC;    
 }
 
 @end
@@ -48,15 +46,15 @@
 -(NSMutableArray* )getBookHHCNodes
 {
     //这里要判断文件的编码格式
-//    NSData *htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
-//    htmlData = [self toUTF8:htmlData];
-//    if (!htmlData) {  //如果本身就是utf8，toUTF8会失败,那就不用转换了
-//        htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
-//    }
-//    NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
-//    HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
-//    NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
-//    return nodes;
+    NSData *htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
+    htmlData = [self toUTF8:htmlData];
+    if (!htmlData) {  //如果本身就是utf8，toUTF8会失败,那就不用转换了
+        htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
+    }
+    NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
+    HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
+    NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
+    return nodes;
     return nil;
 }
 
@@ -73,6 +71,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickOnOutlineNode:) name:CLICK_ON_OUTLINE_NODE object:nil];
     //解析自身的路径下带的bookPath (hhc文件)
     NSLog(@"enter the pacakge view ,the hhc path is :%@", _book[@"bookPath"]);
     __weak PacketVC *weakSelf = self;
@@ -89,7 +88,7 @@
             [weakSelf.tableSource addObject:dic];
         }
         [weakSelf.tableView reloadData];
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:HHCNODES_PARSE_DONE_NOTIFY object:_hhcNodes]; //通知HHCOutLineVC重画
     });
     
     
@@ -143,4 +142,20 @@
     [_menuVC.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)clickOnOutlineNode:(NSNotification*)notifi
+{
+    self.tableSource = [[NSMutableArray alloc] init];
+    _hhcNodes = notifi.object;
+    //把nodes拆成想要的格式
+    for (HHCNode* hhcNode in _hhcNodes) {
+        if (!hhcNode.localHref) {
+            hhcNode.localHref = @"";
+        }
+        NSDictionary *dic = @{@"bookName": hhcNode.name,
+                              @"bookPath" : hhcNode.localHref};
+        [self.tableSource addObject:dic];
+    }
+    
+    [self.tableView reloadData];
+}
 @end

@@ -24,4 +24,18 @@
     return self;
 }
 
+-(void) getPreOrderNodes:(HHCNode*)node toRes:(NSMutableArray*) res
+{
+    for (HHCNode *child in node.children) {
+        [res addObject:child];
+        [self getPreOrderNodes:child toRes:res];
+    }
+}
+
+-(NSMutableArray*) getPreOrderChilren
+{
+    NSMutableArray *res = [[NSMutableArray alloc] init];
+    [self getPreOrderNodes:self toRes:res];
+    return res;
+}
 @end

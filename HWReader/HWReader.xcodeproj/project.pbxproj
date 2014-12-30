@@ -112,7 +112,6 @@
 		183B48A019D3AB80007C642A /* BookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B489F19D3AB80007C642A /* BookView.m */; };
 		183B48A319D3AD89007C642A /* BookRackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B48A219D3AD89007C642A /* BookRackCell.m */; };
 		183B6EA01993150D000CE3C8 /* BookRackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6E991993150D000CE3C8 /* BookRackVC.m */; };
-		183B6EA11993150D000CE3C8 /* OutlineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6E9B1993150D000CE3C8 /* OutlineVC.m */; };
 		183B6EA21993150D000CE3C8 /* PacketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6E9D1993150D000CE3C8 /* PacketVC.m */; };
 		183B6EA31993150D000CE3C8 /* ReadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6E9F1993150D000CE3C8 /* ReadVC.m */; };
 		183B6EA6199319C2000CE3C8 /* BaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6EA5199319C2000CE3C8 /* BaseTableVC.m */; };
@@ -160,10 +159,10 @@
 		18D0DAD31998674A009C8639 /* DownloadTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadTaskVC.m */; };
 		18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD71998B30A009C8639 /* AnimationKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A0115B721A52A00E009DCF0D /* HtmlTextGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0115B711A52A00E009DCF0D /* HtmlTextGetter.m */; };
-		A013FB811A5141FE001B7175 /* SLidderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A013FB801A5141FE001B7175 /* SLidderVC.m */; };
 		A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FFAE11A39389D00894D78 /* LoginRequest.m */; };
 		A041CA6E1A4BE37D004B7D69 /* HHCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA6D1A4BE37D004B7D69 /* HHCNode.m */; };
 		A041CA711A4BE388004B7D69 /* HHCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA701A4BE388004B7D69 /* HHCParser.m */; };
+		A072D7301A52A65300620D00 /* HHCOutlineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A072D72F1A52A65300620D00 /* HHCOutlineVC.m */; };
 		A0ABFABC1A528A97008C03D2 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0ABFABB1A528A97008C03D2 /* DDMenuController.m */; };
 /* End PBXBuildFile section */
 
@@ -317,8 +316,6 @@
 		183B48A219D3AD89007C642A /* BookRackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRackCell.m; sourceTree = "<group>"; };
 		183B6E981993150D000CE3C8 /* BookRackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRackVC.h; sourceTree = "<group>"; };
 		183B6E991993150D000CE3C8 /* BookRackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRackVC.m; sourceTree = "<group>"; };
-		183B6E9A1993150D000CE3C8 /* OutlineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineVC.h; sourceTree = "<group>"; };
-		183B6E9B1993150D000CE3C8 /* OutlineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineVC.m; sourceTree = "<group>"; };
 		183B6E9C1993150D000CE3C8 /* PacketVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketVC.h; sourceTree = "<group>"; };
 		183B6E9D1993150D000CE3C8 /* PacketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketVC.m; sourceTree = "<group>"; };
 		183B6E9E1993150D000CE3C8 /* ReadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadVC.h; sourceTree = "<group>"; };
@@ -408,14 +405,14 @@
 		18D0DAD71998B30A009C8639 /* AnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKit.m; sourceTree = "<group>"; };
 		A0115B701A52A00E009DCF0D /* HtmlTextGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlTextGetter.h; sourceTree = "<group>"; };
 		A0115B711A52A00E009DCF0D /* HtmlTextGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlTextGetter.m; sourceTree = "<group>"; };
-		A013FB7F1A5141FE001B7175 /* SLidderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLidderVC.h; sourceTree = "<group>"; };
-		A013FB801A5141FE001B7175 /* SLidderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLidderVC.m; sourceTree = "<group>"; };
 		A03FFAE01A39389D00894D78 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		A03FFAE11A39389D00894D78 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 		A041CA6C1A4BE37D004B7D69 /* HHCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCNode.h; sourceTree = "<group>"; };
 		A041CA6D1A4BE37D004B7D69 /* HHCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCNode.m; sourceTree = "<group>"; };
 		A041CA6F1A4BE388004B7D69 /* HHCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCParser.h; sourceTree = "<group>"; };
 		A041CA701A4BE388004B7D69 /* HHCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCParser.m; sourceTree = "<group>"; };
+		A072D72E1A52A65300620D00 /* HHCOutlineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCOutlineVC.h; sourceTree = "<group>"; };
+		A072D72F1A52A65300620D00 /* HHCOutlineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCOutlineVC.m; sourceTree = "<group>"; };
 		A0ABFABA1A528A97008C03D2 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		A0ABFABB1A528A97008C03D2 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -766,8 +763,8 @@
 		183B6E97199314E8000CE3C8 /* BookRack */ = {
 			isa = PBXGroup;
 			children = (
-				183B6E9A1993150D000CE3C8 /* OutlineVC.h */,
-				183B6E9B1993150D000CE3C8 /* OutlineVC.m */,
+				A072D72E1A52A65300620D00 /* HHCOutlineVC.h */,
+				A072D72F1A52A65300620D00 /* HHCOutlineVC.m */,
 				183B6E981993150D000CE3C8 /* BookRackVC.h */,
 				183B6E991993150D000CE3C8 /* BookRackVC.m */,
 				A013FB7E1A51416D001B7175 /* PacketVC */,
@@ -933,8 +930,6 @@
 				A0ABFABB1A528A97008C03D2 /* DDMenuController.m */,
 				183B6E9C1993150D000CE3C8 /* PacketVC.h */,
 				183B6E9D1993150D000CE3C8 /* PacketVC.m */,
-				A013FB7F1A5141FE001B7175 /* SLidderVC.h */,
-				A013FB801A5141FE001B7175 /* SLidderVC.m */,
 			);
 			name = PacketVC;
 			sourceTree = "<group>";
@@ -1121,6 +1116,7 @@
 				184E3B971A2D99C9004F553F /* ASINSStringAdditions.m in Sources */,
 				A0115B721A52A00E009DCF0D /* HtmlTextGetter.m in Sources */,
 				18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */,
+				A072D7301A52A65300620D00 /* HHCOutlineVC.m in Sources */,
 				180D5327197FB93600B803A1 /* GDataXMLNode.m in Sources */,
 				184E3B951A2D99C9004F553F /* ASIInputStream.m in Sources */,
 				184E3B901A2D99C9004F553F /* ASIDataCompressor.m in Sources */,
@@ -1143,12 +1139,10 @@
 				180D52C1197FB82F00B803A1 /* main.m in Sources */,
 				184E3B941A2D99C9004F553F /* ASIHTTPRequest.m in Sources */,
 				1818295E19CFBF180086A334 /* ReadSearchVC.m in Sources */,
-				183B6EA11993150D000CE3C8 /* OutlineVC.m in Sources */,
 				183B6EA31993150D000CE3C8 /* ReadVC.m in Sources */,
 				A041CA711A4BE388004B7D69 /* HHCParser.m in Sources */,
 				180D5329197FB93600B803A1 /* TFHppleElement.m in Sources */,
 				180D52FD197FB92400B803A1 /* BaseNaviBar.m in Sources */,
-				A013FB811A5141FE001B7175 /* SLidderVC.m in Sources */,
 				183B48A319D3AD89007C642A /* BookRackCell.m in Sources */,
 				181DFC1119EE7A960081AF1F /* DownloadCell.m in Sources */,
 				180D532F197FB93600B803A1 /* ZipArchive.mm in Sources */,

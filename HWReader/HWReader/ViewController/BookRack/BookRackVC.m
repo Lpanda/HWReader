@@ -10,7 +10,7 @@
 #import "PacketVC.h"
 #import "BookRackCell.h"
 #import "DocManager.h"
-//#import "SLidderVC.h"
+#import "HHCOutlineVC.h"
 
 
 #define PULLDOWNSELECTBTN_HEIGHT (ISPAD ? 40 : 20)
@@ -143,7 +143,7 @@ static const NSInteger COL_LENGTH = 3;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (isListShow) {
-        [self pushNextVC];
+       // [self pushNextVC];
     }
 }
 
@@ -190,12 +190,15 @@ static const NSInteger COL_LENGTH = 3;
 - (void)bookClick:(NSNotification *)notifi{
     NSLog(@"get the notifycation call back ,the arg is :%@ ", notifi.object);
     if (self == [self.navigationController.viewControllers lastObject]) {
-        
-        [self pushNextVC];
-        
-//        PacketVC *packetVC = [[PacketVC alloc]init];
-//        packetVC.book = notifi.object;
-//        [self.navigationController pushViewController:packetVC animated:YES];
+        PacketVC *packetVC = [[PacketVC alloc]init];
+        packetVC.book = notifi.object;
+        DDMenuController *menuVC = [[DDMenuController alloc]initWithRootViewController:packetVC];
+        packetVC.menuVC = menuVC;
+        HHCOutlineVC *leftTable = [[HHCOutlineVC alloc]initWithStyle:UITableViewStylePlain];
+        leftTable.menu = menuVC;
+        menuVC.leftViewController = leftTable;
+        [self.navigationController pushViewController:menuVC animated:YES];
+
     }
 }
 
@@ -203,18 +206,6 @@ static const NSInteger COL_LENGTH = 3;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-# pragma mark 写法参照 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
-- (void)pushNextVC{
-    
-    PacketVC *packetVC = [[PacketVC alloc]init];
-    DDMenuController *menuVC = [[DDMenuController alloc]initWithRootViewController:packetVC];
-    packetVC.menuVC = menuVC;
-    UITableViewController *leftTable = [[UITableViewController alloc]initWithStyle:UITableViewStylePlain];
-    menuVC.leftViewController = leftTable;
-    [self.navigationController pushViewController:menuVC animated:YES];
-
 }
 
 @end
