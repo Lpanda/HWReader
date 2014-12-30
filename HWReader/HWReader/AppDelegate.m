@@ -14,6 +14,8 @@
 #import "AnotherVC.h"
 #import "LocalizeManager.h"
 #import "DownloadCenter.h"
+#import "HtmlTextGetter.h"
+
 
 @implementation AppDelegate
 
@@ -22,6 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *HTML_TEST_PATH = @"/Users/zhaochao/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/67D8916F-749E-4A23-9D50-443569D2ED97/Documents/unZipFiles/BSC6900 UMTS 产品文档 V900R015C00/bsc6900-documents--new-15.0-ZH-app/cbb000002/cbb000002_004.html";
+    NSString *htmlText = [HtmlTextGetter getTextByHtml:HTML_TEST_PATH];
+    NSLog(@"%@", htmlText);
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     NSArray *controllers = [NSArray arrayWithObjects:[[BookRackVC alloc]init],[[DownloadMainVC alloc]init],

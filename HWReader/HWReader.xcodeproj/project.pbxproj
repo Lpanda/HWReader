@@ -159,6 +159,7 @@
 		18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DACC19985DB9009C8639 /* QuickSearchVC.m */; };
 		18D0DAD31998674A009C8639 /* DownloadTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadTaskVC.m */; };
 		18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD71998B30A009C8639 /* AnimationKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A0115B721A52A00E009DCF0D /* HtmlTextGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0115B711A52A00E009DCF0D /* HtmlTextGetter.m */; };
 		A013FB811A5141FE001B7175 /* SLidderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A013FB801A5141FE001B7175 /* SLidderVC.m */; };
 		A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FFAE11A39389D00894D78 /* LoginRequest.m */; };
 		A041CA6E1A4BE37D004B7D69 /* HHCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA6D1A4BE37D004B7D69 /* HHCNode.m */; };
@@ -405,6 +406,8 @@
 		18D0DAD51998B2B2009C8639 /* AnimationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDefine.h; sourceTree = "<group>"; };
 		18D0DAD61998B30A009C8639 /* AnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationKit.h; sourceTree = "<group>"; };
 		18D0DAD71998B30A009C8639 /* AnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKit.m; sourceTree = "<group>"; };
+		A0115B701A52A00E009DCF0D /* HtmlTextGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlTextGetter.h; sourceTree = "<group>"; };
+		A0115B711A52A00E009DCF0D /* HtmlTextGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlTextGetter.m; sourceTree = "<group>"; };
 		A013FB7F1A5141FE001B7175 /* SLidderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLidderVC.h; sourceTree = "<group>"; };
 		A013FB801A5141FE001B7175 /* SLidderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLidderVC.m; sourceTree = "<group>"; };
 		A03FFAE01A39389D00894D78 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
@@ -943,6 +946,8 @@
 				A041CA6D1A4BE37D004B7D69 /* HHCNode.m */,
 				A041CA6F1A4BE388004B7D69 /* HHCParser.h */,
 				A041CA701A4BE388004B7D69 /* HHCParser.m */,
+				A0115B701A52A00E009DCF0D /* HtmlTextGetter.h */,
+				A0115B711A52A00E009DCF0D /* HtmlTextGetter.m */,
 			);
 			name = HHCParser;
 			sourceTree = "<group>";
@@ -1114,6 +1119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184E3B971A2D99C9004F553F /* ASINSStringAdditions.m in Sources */,
+				A0115B721A52A00E009DCF0D /* HtmlTextGetter.m in Sources */,
 				18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */,
 				180D5327197FB93600B803A1 /* GDataXMLNode.m in Sources */,
 				184E3B951A2D99C9004F553F /* ASIInputStream.m in Sources */,

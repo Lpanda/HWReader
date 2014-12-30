@@ -170,7 +170,7 @@ static DownloadCenter *downloadCenter = nil;
         [localBooks addObject:@{@"bookName" : hhcBookName,
                                 @"bookPath" : absHHCPath}];
         [DocManager writeToLocalBooks:localBooks];
-        //通知书架重画
+        //todo:通知书架重画
     });
 }
 
