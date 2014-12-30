@@ -13,6 +13,10 @@
 
 
 @interface DownloadTaskVC ()
+{
+    NSMutableArray *_downloadingTasks;
+    NSMutableArray *_downloadHistoryTasks;
+}
 @end
 
 @implementation DownloadTaskVC
@@ -29,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _downloadingTasks = [[NSMutableArray alloc] init];
+    _downloadHistoryTasks = [[NSMutableArray alloc] init];
     downloadStatus = Downloading;
     [(SegmentedNaviBar*)self.naviBar setDefaultIndex:0];
     [self.naviBar setBehavior:[NSNumber numberWithInt:downloadStatus]];
@@ -73,19 +79,37 @@
     
 }
 
+-(BOOL)isTaskDownloading:(NSDictionary *)taskDic
+{
+    BOOL isInTask = NO;
+    for (NSDictionary *dic in _downloadingTasks) {
+        if ([taskDic [@"name"] isEqualToString:dic[@"name"] ]
+            && [taskDic[@"url"] isEqualToString:dic[@"url"]]) {
+            isInTask = YES;
+            break;
+        }
+    }
+    return  isInTask;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellId = @"DownloadCellId";
     DownloadCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[DownloadCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
+    NSDictionary *taskDic  = self.tableSource[indexPath.row];
+    
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
-    cell.textLabel.text = self.tableSource[indexPath.row][@"name"];
-    NSDictionary *taskDic = self.tableSource[indexPath.row];
-    ASIHTTPRequest *request = [[DownloadCenter getInstance] createRequestWithTaskDic: taskDic];
-    [[DownloadCenter getInstance]addDownloadRequest:request];
-    [request setDownloadProgressDelegate:cell.downloadProgress];
-    cell.request = request;
+    cell.textLabel.text = taskDic[@"name"];
+  
+    if (![self isTaskDownloading:taskDic]) {
+        ASIHTTPRequest *request = [[DownloadCenter getInstance] createRequestWithTaskDic: taskDic];
+        [[DownloadCenter getInstance]addDownloadRequest:request];
+        [request setDownloadProgressDelegate:cell.downloadProgress];
+        cell.request = request;
+        
+        [_downloadingTasks addObject:taskDic];
+    }
     downloadStatus == Downloading ? [cell showDownloadingContent] : [cell showDownloadHistory];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -118,12 +142,19 @@
 
 -(void)addDownloadTask: (NSDictionary *) taskDic
 {
-    [self.tableView beginUpdates];
-    [self.tableSource addObject:taskDic];
-    NSArray *arrInsertRows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:[self.tableSource count]-1 inSection:0]];
-    [self.tableView insertRowsAtIndexPaths:arrInsertRows withRowAnimation:UITableViewRowAnimationBottom];
-    [self.tableView endUpdates];
-    [[DownloadCenter getInstance]start];
+    if (![self isTaskDownloading:taskDic])
+    {
+        [self.tableView beginUpdates];
+         [self.tableSource addObject:taskDic];
+        NSArray *arrInsertRows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:[self.tableSource count]-1 inSection:0]];
+        [self.tableView insertRowsAtIndexPaths:arrInsertRows withRowAnimation:UITableViewRowAnimationBottom];
+        [self.tableView endUpdates];
+        [[DownloadCenter getInstance]start];
+    }
+    else
+    {
+        [self.tableView reloadData];
+    }
 }
 
 @end

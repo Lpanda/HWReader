@@ -10,10 +10,15 @@
 #import "ReadVC.h"
 #import "NormalNaviBar.h"
 #import "HHCParser.h"
+#import "OutlineVC.h"
+#import "DDMenuController.h"
 
 @interface PacketVC (){
     NormalNaviBar *naviBar;
     NSMutableArray *_hhcNodes;
+    OutlineVC *_outlineVC;
+    DDMenuController *_menuVC;
+    
 }
 
 @end
@@ -25,6 +30,7 @@
     CFStringRef gbkStr = CFStringCreateWithBytes(NULL, [sourceData bytes], [sourceData length], kCFStringEncodingGB_18030_2000, false);
     
     if (gbkStr == NULL) {
+        NSLog(@"GBK is null");
         return nil;
     }
     else
@@ -43,8 +49,12 @@
 
 -(NSMutableArray* )getBookHHCNodes
 {
+    //这里要判断文件的编码格式
     NSData *htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
     htmlData = [self toUTF8:htmlData];
+    if (!htmlData) {  //如果本身就是utf8，toUTF8会失败,那就不用转换了
+        htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
+    }
     NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
     HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
     NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
@@ -80,8 +90,18 @@
             [weakSelf.tableSource addObject:dic];
         }
         [weakSelf.tableView reloadData];
+        //_outlineVC = [[OutlineVC alloc] init];
+        _menuVC = [[DDMenuController alloc] initWithRootViewController:self.navigationController];
+        _menuVC.leftViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+       // [self.view addSubview:_outlineVC.view];
+        self.navigationController.navigationBarHidden = NO;
+       // [_menuVC.view addSubview:_outlineVC.view];
+        
     });
+
+
 }
+
 
 - (BaseNaviBar *)drawTopNaviBar{
     return [[NormalNaviBar alloc]initWithDelegate:self HideBtn:Right Title:_book[@"bookName"]];

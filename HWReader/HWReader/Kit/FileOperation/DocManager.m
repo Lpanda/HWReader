@@ -12,7 +12,7 @@
 
 #define FILELISTPATH   @"/FileList.xml"
 
-static  NSString *localPlistName = @"LocalBook";
+static  NSString *kLocalBook = @"LocalBook.plist";
 static NSFileManager *fileManager;
 @interface DocManager ()<ZipArchiveDelegate>
 
@@ -71,10 +71,31 @@ static NSFileManager *fileManager;
 }
 
 # pragma mark 通过plist文件获取其中保存的文件名
+
++(NSString*) getLocalBookPath
+{
+    NSString *docPath = [DocManager getDocumentPath];
+    NSString *localBookPath = [docPath stringByAppendingPathComponent:kLocalBook];
+    return  localBookPath;
+}
+
++(void)writeToLocalBooks:(NSMutableArray *) books
+{
+    NSLog(@"ready to write to local book ,para: %@", books);
+    [books writeToFile:[DocManager getLocalBookPath] atomically:YES];
+}
+
 +(NSMutableArray*)getLocalBooks
 {
-    NSMutableArray *books = [NSArray arrayWithContentsOfFile:
-                              [[NSBundle mainBundle] pathForResource:localPlistName  ofType: @"plist"]];
+    NSString *localBookPath = [DocManager getLocalBookPath];
+    NSMutableArray* books = [NSMutableArray arrayWithContentsOfFile:localBookPath];
+    if(books == nil)
+    {
+        NSLog(@"create local book plist");
+        NSFileManager* fm = [NSFileManager defaultManager];
+        [fm createFileAtPath:localBookPath contents:nil attributes:nil];
+        books = [[NSMutableArray alloc] init];
+    }
     NSLog(@"%@", books);
     return books;
 }
@@ -122,7 +143,7 @@ static NSFileManager *fileManager;
     //  获取到resource目录先要解压的文件名
     NSMutableArray *zipFiles = [[NSMutableArray alloc]init];
     
-    NSArray *plistFileNames = [self getZipFileNamesByPlistName:localPlistName];
+    NSArray *plistFileNames = [self getZipFileNamesByPlistName:kLocalBook];
     
     for (NSString *plistFileName in plistFileNames) {
         NSString *plistFilePath = [self getFilePathByName:plistFileName AndPathState:Resource];

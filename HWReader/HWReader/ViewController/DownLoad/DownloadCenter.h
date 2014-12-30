@@ -27,4 +27,6 @@
 
 - (ASIHTTPRequest *)createRequestWithTaskDic:(NSDictionary *)taskDic;
 -(void)addDownloadRequest: (ASIHTTPRequest *)reqeust;
+
+-(void)TestWritePlist;
 @end

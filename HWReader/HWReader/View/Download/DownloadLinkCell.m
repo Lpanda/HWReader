@@ -39,6 +39,8 @@
     downloadImg.frame = CGRectMake(0, 0, DOWNLOADIMG_SIZE, DOWNLOADIMG_SIZE);
     downloadImg.center = CGPointMake(SELF_WIDTH - (DOWNLOADIMG_SIZE / 2), SELF_HEIGHT / 2);
 }
-
-
+- (void)showDownLoadImg
+{
+    downloadImg.hidden = NO;
+}
 @end

@@ -13,5 +13,5 @@
 }
 
 - (void)hideDownloadImg;
-
+- (void)showDownLoadImg;
 @end

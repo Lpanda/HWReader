@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1800E10119D2B7CA0069F9B8 /* LocalBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1800E10019D2B7CA0069F9B8 /* LocalBook.plist */; };
 		1807265A19CBCDF2000B2424 /* ReadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1807265919CBCDF2000B2424 /* ReadVC.xib */; };
 		180D52B5197FB82F00B803A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180D52B4197FB82F00B803A1 /* Foundation.framework */; };
 		180D52B7197FB82F00B803A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180D52B6197FB82F00B803A1 /* CoreGraphics.framework */; };
@@ -118,7 +117,6 @@
 		183B6EA31993150D000CE3C8 /* ReadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6E9F1993150D000CE3C8 /* ReadVC.m */; };
 		183B6EA6199319C2000CE3C8 /* BaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6EA5199319C2000CE3C8 /* BaseTableVC.m */; };
 		183B6EA919931BAB000CE3C8 /* MenuBookmarkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B6EA819931BAB000CE3C8 /* MenuBookmarkVC.m */; };
-		183CDBE419E8CFB30083382A /* demo.hhc in Resources */ = {isa = PBXBuildFile; fileRef = 183CDBE319E8CFB30083382A /* demo.hhc */; };
 		183CDBE619E90BCD0083382A /* DownLoadMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183CDBE519E90BCD0083382A /* DownLoadMainVC.xib */; };
 		184E3B711A2D91EC004F553F /* DownloadCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E3B701A2D91EC004F553F /* DownloadCenter.m */; };
 		184E3B731A2D9988004F553F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E3B721A2D9988004F553F /* SystemConfiguration.framework */; };
@@ -161,9 +159,11 @@
 		18D0DACD19985DB9009C8639 /* QuickSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DACC19985DB9009C8639 /* QuickSearchVC.m */; };
 		18D0DAD31998674A009C8639 /* DownloadTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD21998674A009C8639 /* DownloadTaskVC.m */; };
 		18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0DAD71998B30A009C8639 /* AnimationKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A013FB811A5141FE001B7175 /* SLidderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A013FB801A5141FE001B7175 /* SLidderVC.m */; };
 		A03FFAE21A39389D00894D78 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A03FFAE11A39389D00894D78 /* LoginRequest.m */; };
 		A041CA6E1A4BE37D004B7D69 /* HHCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA6D1A4BE37D004B7D69 /* HHCNode.m */; };
 		A041CA711A4BE388004B7D69 /* HHCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA701A4BE388004B7D69 /* HHCParser.m */; };
+		A0ABFABC1A528A97008C03D2 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0ABFABB1A528A97008C03D2 /* DDMenuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +177,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1800E10019D2B7CA0069F9B8 /* LocalBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LocalBook.plist; path = ../../../Resource/LocalBook.plist; sourceTree = "<group>"; };
 		1807265919CBCDF2000B2424 /* ReadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadVC.xib; sourceTree = "<group>"; };
 		180D52B1197FB82F00B803A1 /* HWReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D52B4197FB82F00B803A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -327,7 +326,6 @@
 		183B6EA5199319C2000CE3C8 /* BaseTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableVC.m; sourceTree = "<group>"; };
 		183B6EA719931BAB000CE3C8 /* MenuBookmarkVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBookmarkVC.h; sourceTree = "<group>"; };
 		183B6EA819931BAB000CE3C8 /* MenuBookmarkVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBookmarkVC.m; sourceTree = "<group>"; };
-		183CDBE319E8CFB30083382A /* demo.hhc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.hhc; sourceTree = "<group>"; };
 		183CDBE519E90BCD0083382A /* DownLoadMainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownLoadMainVC.xib; sourceTree = "<group>"; };
 		184E3B6F1A2D91EC004F553F /* DownloadCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCenter.h; sourceTree = "<group>"; };
 		184E3B701A2D91EC004F553F /* DownloadCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCenter.m; sourceTree = "<group>"; };
@@ -407,12 +405,16 @@
 		18D0DAD51998B2B2009C8639 /* AnimationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDefine.h; sourceTree = "<group>"; };
 		18D0DAD61998B30A009C8639 /* AnimationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationKit.h; sourceTree = "<group>"; };
 		18D0DAD71998B30A009C8639 /* AnimationKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKit.m; sourceTree = "<group>"; };
+		A013FB7F1A5141FE001B7175 /* SLidderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLidderVC.h; sourceTree = "<group>"; };
+		A013FB801A5141FE001B7175 /* SLidderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLidderVC.m; sourceTree = "<group>"; };
 		A03FFAE01A39389D00894D78 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		A03FFAE11A39389D00894D78 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 		A041CA6C1A4BE37D004B7D69 /* HHCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCNode.h; sourceTree = "<group>"; };
 		A041CA6D1A4BE37D004B7D69 /* HHCNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCNode.m; sourceTree = "<group>"; };
 		A041CA6F1A4BE388004B7D69 /* HHCParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCParser.h; sourceTree = "<group>"; };
 		A041CA701A4BE388004B7D69 /* HHCParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCParser.m; sourceTree = "<group>"; };
+		A0ABFABA1A528A97008C03D2 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		A0ABFABB1A528A97008C03D2 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,7 +658,6 @@
 		180D533C197FDCEC00B803A1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				183CDBE319E8CFB30083382A /* demo.hhc */,
 				1813D22219A32126005FC3DC /* Image */,
 			);
 			path = Resource;
@@ -762,13 +763,11 @@
 		183B6E97199314E8000CE3C8 /* BookRack */ = {
 			isa = PBXGroup;
 			children = (
-				1800E10019D2B7CA0069F9B8 /* LocalBook.plist */,
 				183B6E9A1993150D000CE3C8 /* OutlineVC.h */,
 				183B6E9B1993150D000CE3C8 /* OutlineVC.m */,
 				183B6E981993150D000CE3C8 /* BookRackVC.h */,
 				183B6E991993150D000CE3C8 /* BookRackVC.m */,
-				183B6E9C1993150D000CE3C8 /* PacketVC.h */,
-				183B6E9D1993150D000CE3C8 /* PacketVC.m */,
+				A013FB7E1A51416D001B7175 /* PacketVC */,
 				183B6E9E1993150D000CE3C8 /* ReadVC.h */,
 				183B6E9F1993150D000CE3C8 /* ReadVC.m */,
 				1807265919CBCDF2000B2424 /* ReadVC.xib */,
@@ -924,6 +923,19 @@
 			path = AnimationKit;
 			sourceTree = "<group>";
 		};
+		A013FB7E1A51416D001B7175 /* PacketVC */ = {
+			isa = PBXGroup;
+			children = (
+				A0ABFABA1A528A97008C03D2 /* DDMenuController.h */,
+				A0ABFABB1A528A97008C03D2 /* DDMenuController.m */,
+				183B6E9C1993150D000CE3C8 /* PacketVC.h */,
+				183B6E9D1993150D000CE3C8 /* PacketVC.m */,
+				A013FB7F1A5141FE001B7175 /* SLidderVC.h */,
+				A013FB801A5141FE001B7175 /* SLidderVC.m */,
+			);
+			name = PacketVC;
+			sourceTree = "<group>";
+		};
 		A041CA6B1A4BE35E004B7D69 /* HHCParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -1025,7 +1037,6 @@
 				1813D27619A3215C005FC3DC /* 暂停灰K60.png in Resources */,
 				1813D26819A3215C005FC3DC /* 搜索白-icon.png in Resources */,
 				1811E8E519A1E12400D2DDF1 /* CopyRightVC.xib in Resources */,
-				1800E10119D2B7CA0069F9B8 /* LocalBook.plist in Resources */,
 				1813D26219A3215C005FC3DC /* 色块K10.png in Resources */,
 				1813D25219A3215C005FC3DC /* 导航栏红.png in Resources */,
 				1858416B19EB6E83006C0AF2 /* SysList.plist in Resources */,
@@ -1046,7 +1057,6 @@
 				1813D25119A3215C005FC3DC /* 播放灰K60.png in Resources */,
 				1813D26919A3215C005FC3DC /* 搜索红-icon.png in Resources */,
 				18168E0919D29D0400B6A988 /* 大包背景.png in Resources */,
-				183CDBE419E8CFB30083382A /* demo.hhc in Resources */,
 				1813D26A19A3215C005FC3DC /* 搜索框.png in Resources */,
 				1813D25B19A3215C005FC3DC /* 快搜灰K20.png in Resources */,
 				1818682519F4E767009E4CE2 /* 取消下载红.png in Resources */,
@@ -1132,6 +1142,7 @@
 				A041CA711A4BE388004B7D69 /* HHCParser.m in Sources */,
 				180D5329197FB93600B803A1 /* TFHppleElement.m in Sources */,
 				180D52FD197FB92400B803A1 /* BaseNaviBar.m in Sources */,
+				A013FB811A5141FE001B7175 /* SLidderVC.m in Sources */,
 				183B48A319D3AD89007C642A /* BookRackCell.m in Sources */,
 				181DFC1119EE7A960081AF1F /* DownloadCell.m in Sources */,
 				180D532F197FB93600B803A1 /* ZipArchive.mm in Sources */,
@@ -1158,6 +1169,7 @@
 				1826182C19C136270086CA48 /* NSString+Category.m in Sources */,
 				18B934EB198890F200779D32 /* BaseVC.m in Sources */,
 				184E3B961A2D99C9004F553F /* ASINetworkQueue.m in Sources */,
+				A0ABFABC1A528A97008C03D2 /* DDMenuController.m in Sources */,
 				184E3B911A2D99C9004F553F /* ASIDataDecompressor.m in Sources */,
 				18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */,
 				18BA63A719C02A9D008D07F9 /* EmailSender.m in Sources */,

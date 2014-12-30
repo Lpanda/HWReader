@@ -13,7 +13,7 @@
 #import "QuickSearchVC.h"
 #import "AnotherVC.h"
 #import "LocalizeManager.h"
-
+#import "DownloadCenter.h"
 
 @implementation AppDelegate
 
@@ -45,6 +45,7 @@
     tabBar.tabBar.backgroundImage = [[UIImage imageNamed:TABBAR_BGIMG]
                                      imageWithFitInSize:TABBAR_BGIMG_SIZE];
     
+
     [self.window setRootViewController:tabBar];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

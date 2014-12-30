@@ -46,7 +46,7 @@
 }
 
 -(void)btnAction{
-    NSLog(@"%click on bookview ,this will post notification: BookClickNotifi ");
+    NSLog(@"click on bookview ,this will post notification: BookClickNotifi ");
     [[NSNotificationCenter defaultCenter] postNotificationName:BOOKCLICKNOTIFI object:self.book];
 }
 
@@ -56,7 +56,7 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    _nameLB.frame = CGRectMake(NAMELB_ORIGNX, 0, SELF_WIDTH - NAMELB_ORIGNX, SELF_HEIGHT);
+    _nameLB.frame = CGRectMake(NAMELB_ORIGNX, 0, SELF_WIDTH - NAMELB_ORIGNX-10, SELF_HEIGHT);
     clickBtn.frame = self.bounds;
 }
 

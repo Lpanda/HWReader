@@ -56,6 +56,7 @@ typedef enum {
 +(NSString*)getHHPPathIn:(NSString*) folderPath;
 
 +(NSMutableArray*)getLocalBooks;
++(void)writeToLocalBooks:(NSMutableArray *) books;
 
 +(NSString*) findFileInFloder:(NSString*) folderPath withExtention: (NSString*) fileExt;
 @end

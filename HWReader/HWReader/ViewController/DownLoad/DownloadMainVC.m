@@ -246,7 +246,14 @@
     NSDictionary *langDic;
     langDic = [self getCellLanguageDicAt:indexPath];
     cell.textLabel.text = langDic[DOCUMENT_NAME];
-    
+    //看有有效链接没，没有改掉img的图片
+    if ([langDic[@"url"] isEmptyOrNull]) {
+        [cell hideDownloadImg];
+    }
+    else
+    {
+        [cell showDownLoadImg];
+    }
     return cell;
 }
 

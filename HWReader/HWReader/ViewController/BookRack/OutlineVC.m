@@ -16,7 +16,9 @@ static CGFloat outlineTableCellHeight = 45.0f;
 static CGFloat outlineSearchTFOrignY =  3.0f;
 
 @interface OutlineVC ()
-
+{
+    NSArray *_testArr;
+}
 @property (weak, nonatomic) IBOutlet UITextField *searchTF;
 
 @end
@@ -39,7 +41,7 @@ static CGFloat outlineSearchTFOrignY =  3.0f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _testArr = @[@"sdfsdf",@"asdfaf"];
     outlineTable.backgroundColor = [UIColor whiteColor];
     outlineTable.delegate = self;
     outlineTable.dataSource = self;
@@ -76,15 +78,15 @@ static CGFloat outlineSearchTFOrignY =  3.0f;
     return outlineTableCellHeight;
 }
 
-
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return  [_testArr count];
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"ShowReadView" sender:self];
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OutlineTableCell"];
