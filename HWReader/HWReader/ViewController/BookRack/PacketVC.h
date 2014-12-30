@@ -7,7 +7,9 @@
 //
 
 #import "BookRackVC.h"
+#import "DDMenuController.h"
 
 @interface PacketVC : BookRackVC
 @property (nonatomic, copy) NSDictionary *book;
+@property (nonatomic, assign) DDMenuController *menuVC;
 @end

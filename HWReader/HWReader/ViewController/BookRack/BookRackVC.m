@@ -190,9 +190,12 @@ static const NSInteger COL_LENGTH = 3;
 - (void)bookClick:(NSNotification *)notifi{
     NSLog(@"get the notifycation call back ,the arg is :%@ ", notifi.object);
     if (self == [self.navigationController.viewControllers lastObject]) {
-        PacketVC *packetVC = [[PacketVC alloc]init];
-        packetVC.book = notifi.object;
-        [self.navigationController pushViewController:packetVC animated:YES];
+        
+        [self pushNextVC];
+        
+//        PacketVC *packetVC = [[PacketVC alloc]init];
+//        packetVC.book = notifi.object;
+//        [self.navigationController pushViewController:packetVC animated:YES];
     }
 }
 
@@ -200,6 +203,18 @@ static const NSInteger COL_LENGTH = 3;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+# pragma mark 写法参照 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+- (void)pushNextVC{
+    
+    PacketVC *packetVC = [[PacketVC alloc]init];
+    DDMenuController *menuVC = [[DDMenuController alloc]initWithRootViewController:packetVC];
+    packetVC.menuVC = menuVC;
+    UITableViewController *leftTable = [[UITableViewController alloc]initWithStyle:UITableViewStylePlain];
+    menuVC.leftViewController = leftTable;
+    [self.navigationController pushViewController:menuVC animated:YES];
+
 }
 
 @end

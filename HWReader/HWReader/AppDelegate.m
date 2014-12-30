@@ -54,6 +54,8 @@
     [self.window setRootViewController:tabBar];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSLog(@"path %@",[DocManager getDocumentPath]);
     return YES;
 }
 

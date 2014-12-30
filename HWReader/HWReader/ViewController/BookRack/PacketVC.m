@@ -16,9 +16,7 @@
 @interface PacketVC (){
     NormalNaviBar *naviBar;
     NSMutableArray *_hhcNodes;
-    OutlineVC *_outlineVC;
-    DDMenuController *_menuVC;
-    
+    OutlineVC *_outlineVC;    
 }
 
 @end
@@ -50,15 +48,16 @@
 -(NSMutableArray* )getBookHHCNodes
 {
     //这里要判断文件的编码格式
-    NSData *htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
-    htmlData = [self toUTF8:htmlData];
-    if (!htmlData) {  //如果本身就是utf8，toUTF8会失败,那就不用转换了
-        htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
-    }
-    NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
-    HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
-    NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
-    return nodes;
+//    NSData *htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
+//    htmlData = [self toUTF8:htmlData];
+//    if (!htmlData) {  //如果本身就是utf8，toUTF8会失败,那就不用转换了
+//        htmlData = [NSData dataWithContentsOfFile:_book[@"bookPath"]];
+//    }
+//    NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
+//    HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
+//    NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
+//    return nodes;
+    return nil;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -90,16 +89,10 @@
             [weakSelf.tableSource addObject:dic];
         }
         [weakSelf.tableView reloadData];
-        //_outlineVC = [[OutlineVC alloc] init];
-        _menuVC = [[DDMenuController alloc] initWithRootViewController:self.navigationController];
-        _menuVC.leftViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-       // [self.view addSubview:_outlineVC.view];
-        self.navigationController.navigationBarHidden = NO;
-       // [_menuVC.view addSubview:_outlineVC.view];
         
     });
-
-
+    
+    
 }
 
 
@@ -144,6 +137,10 @@
     readVC.baseUrl = hhcDir;
     readVC.hidesBottomBarWhenPushed = YES;
     [self presentViewController:readVC animated:YES completion:nil];
+}
+
+-(void)leftBtnAction{
+    [_menuVC.navigationController popViewControllerAnimated:YES];
 }
 
 @end
