@@ -11,6 +11,8 @@
 #import "NormalNaviBar.h"
 #import "HHCParser.h"
 #import "HHCOutlineVC.h"
+#import "SmallPackageFilter.h"
+
 
 @interface PacketVC (){
     NormalNaviBar *naviBar;
@@ -53,9 +55,10 @@
     }
     NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
     HHCParser *hhcParser = [[HHCParser alloc] initWithString:html error:nil];
-    NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
-    return nodes;
-    return nil;
+    //NSMutableArray *nodes = [hhcParser getPreOrderTreeNodes];
+    //过滤一道，只要小包
+    NSMutableArray *smallPacakges = [SmallPackageFilter getOutlineNodes:hhcParser.hhcRoot];
+    return smallPacakges;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -88,7 +91,8 @@
             [weakSelf.tableSource addObject:dic];
         }
         [weakSelf.tableView reloadData];
-        [[NSNotificationCenter defaultCenter] postNotificationName:HHCNODES_PARSE_DONE_NOTIFY object:_hhcNodes]; //通知HHCOutLineVC重画
+        [[NSNotificationCenter defaultCenter] postNotificationName:HHCNODES_PARSE_DONE_NOTIFY object:_hhcNodes];
+        
     });
     
     

@@ -164,6 +164,8 @@
 		A041CA711A4BE388004B7D69 /* HHCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A041CA701A4BE388004B7D69 /* HHCParser.m */; };
 		A072D7301A52A65300620D00 /* HHCOutlineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A072D72F1A52A65300620D00 /* HHCOutlineVC.m */; };
 		A0ABFABC1A528A97008C03D2 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0ABFABB1A528A97008C03D2 /* DDMenuController.m */; };
+		A0BAF3D41A53D7C4008ED87F /* SmallPackageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BAF3D31A53D7C4008ED87F /* SmallPackageFilter.m */; };
+		A0BAF3D61A53E4F5008ED87F /* red_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = A0BAF3D51A53E4F5008ED87F /* red_dot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -415,6 +417,9 @@
 		A072D72F1A52A65300620D00 /* HHCOutlineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCOutlineVC.m; sourceTree = "<group>"; };
 		A0ABFABA1A528A97008C03D2 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
 		A0ABFABB1A528A97008C03D2 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		A0BAF3D21A53D7C4008ED87F /* SmallPackageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallPackageFilter.h; sourceTree = "<group>"; };
+		A0BAF3D31A53D7C4008ED87F /* SmallPackageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallPackageFilter.m; sourceTree = "<group>"; };
+		A0BAF3D51A53E4F5008ED87F /* red_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_dot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,6 +671,7 @@
 		1813D22219A32126005FC3DC /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				A0BAF3D51A53E4F5008ED87F /* red_dot.png */,
 				1818681919F4E767009E4CE2 /* 大包列表.png */,
 				1818681A19F4E767009E4CE2 /* 取消下载白.png */,
 				1818681B19F4E767009E4CE2 /* 取消下载红.png */,
@@ -763,11 +769,7 @@
 		183B6E97199314E8000CE3C8 /* BookRack */ = {
 			isa = PBXGroup;
 			children = (
-				A072D72E1A52A65300620D00 /* HHCOutlineVC.h */,
-				A072D72F1A52A65300620D00 /* HHCOutlineVC.m */,
-				183B6E981993150D000CE3C8 /* BookRackVC.h */,
-				183B6E991993150D000CE3C8 /* BookRackVC.m */,
-				A013FB7E1A51416D001B7175 /* PacketVC */,
+				A0BAF3D11A53D74B008ED87F /* BookShelf */,
 				183B6E9E1993150D000CE3C8 /* ReadVC.h */,
 				183B6E9F1993150D000CE3C8 /* ReadVC.m */,
 				1807265919CBCDF2000B2424 /* ReadVC.xib */,
@@ -923,17 +925,6 @@
 			path = AnimationKit;
 			sourceTree = "<group>";
 		};
-		A013FB7E1A51416D001B7175 /* PacketVC */ = {
-			isa = PBXGroup;
-			children = (
-				A0ABFABA1A528A97008C03D2 /* DDMenuController.h */,
-				A0ABFABB1A528A97008C03D2 /* DDMenuController.m */,
-				183B6E9C1993150D000CE3C8 /* PacketVC.h */,
-				183B6E9D1993150D000CE3C8 /* PacketVC.m */,
-			);
-			name = PacketVC;
-			sourceTree = "<group>";
-		};
 		A041CA6B1A4BE35E004B7D69 /* HHCParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +936,23 @@
 				A0115B711A52A00E009DCF0D /* HtmlTextGetter.m */,
 			);
 			name = HHCParser;
+			sourceTree = "<group>";
+		};
+		A0BAF3D11A53D74B008ED87F /* BookShelf */ = {
+			isa = PBXGroup;
+			children = (
+				A072D72E1A52A65300620D00 /* HHCOutlineVC.h */,
+				A072D72F1A52A65300620D00 /* HHCOutlineVC.m */,
+				183B6E981993150D000CE3C8 /* BookRackVC.h */,
+				183B6E991993150D000CE3C8 /* BookRackVC.m */,
+				A0ABFABA1A528A97008C03D2 /* DDMenuController.h */,
+				A0ABFABB1A528A97008C03D2 /* DDMenuController.m */,
+				183B6E9C1993150D000CE3C8 /* PacketVC.h */,
+				183B6E9D1993150D000CE3C8 /* PacketVC.m */,
+				A0BAF3D21A53D7C4008ED87F /* SmallPackageFilter.h */,
+				A0BAF3D31A53D7C4008ED87F /* SmallPackageFilter.m */,
+			);
+			name = BookShelf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1091,6 +1099,7 @@
 				1818682C19F4E767009E4CE2 /* welcome_5.png in Resources */,
 				1811E8E019A1A08800D2DDF1 /* QuickSearchResultVC.xib in Resources */,
 				18168E0D19D29D0400B6A988 /* 切换书架红.png in Resources */,
+				A0BAF3D61A53E4F5008ED87F /* red_dot.png in Resources */,
 				189E523B1A0B0E4300DE0C6B /* QuickSearchVC.xib in Resources */,
 				183CDBE619E90BCD0083382A /* DownLoadMainVC.xib in Resources */,
 				18168E0C19D29D0400B6A988 /* 切换书架白.png in Resources */,
@@ -1172,6 +1181,7 @@
 				A0ABFABC1A528A97008C03D2 /* DDMenuController.m in Sources */,
 				184E3B911A2D99C9004F553F /* ASIDataDecompressor.m in Sources */,
 				18D0DAD81998B30A009C8639 /* AnimationKit.m in Sources */,
+				A0BAF3D41A53D7C4008ED87F /* SmallPackageFilter.m in Sources */,
 				18BA63A719C02A9D008D07F9 /* EmailSender.m in Sources */,
 				1811E8E919A1E17400D2DDF1 /* UserSettingVC.m in Sources */,
 				180D532E197FB93600B803A1 /* zip.c in Sources */,

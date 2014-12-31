@@ -63,57 +63,22 @@
     return self;
 }
 
-#define TEST_HTML_PATH @"/Users/zhaochao/Library/Application Support/iPhone Simulator/7.0.3-64/Applications/A40BE93B-A8A9-47C7-BDA7-7F31809A071A/Documents/unZipFiles/BSC6900 UMTS 产品文档 V900R015C00/bsc6900-documents--new-15.0-ZH-app/SRAN(GUL)-Doc-Guide/zh-cn_topic_0001708472.html"
-
-- (NSString *)URLEncodedString:(NSString*) url
-{
-    NSString *encodedString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                            (CFStringRef)url,
-                                            (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
-                                            NULL,
-                                            kCFStringEncodingUTF8));
-    return encodedString;
-}
-
-- (NSData *) toUTF8:(NSData *)sourceData
-{
-    CFStringRef gbkStr = CFStringCreateWithBytes(NULL, [sourceData bytes], [sourceData length], kCFStringEncodingGB_18030_2000, false);
-    
-    if (gbkStr == NULL) {
-        return nil;
-    }
-    else
-    {
-        NSString *gbkString = (__bridge NSString *)gbkStr;
-        
-        NSString *utf8_string = [gbkString
-                                 stringByReplacingOccurrencesOfString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">"
-                                 withString:@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"];
-        
-        return [utf8_string dataUsingEncoding:NSUTF8StringEncoding];
-        
-    }
-}
-
 
 - (void)viewDidLoad
 {
-    interOrtnFlag = self.interfaceOrientation;
-    NSData *htmlData = [NSData dataWithContentsOfFile:_url];
-    htmlData = [self toUTF8:htmlData];
-    NSString *html = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
-    NSURL*base = [NSURL fileURLWithPath:[_url stringByDeletingLastPathComponent]];
-    
-    NSLog(@"webview didload , base url is : %@", base);
-    [_readWebView loadHTMLString:html baseURL:base];
+    [super viewDidLoad];
     _editBar.alpha = 0.0f;
     
     _changeFontView.hidden = YES;
     
     [self drawFeedbackView];
 
-    [super viewDidLoad];
+    interOrtnFlag = self.interfaceOrientation;
+
+    NSURL*base = [NSURL fileURLWithPath:[_url stringByDeletingLastPathComponent]];
+    NSURL *htmlUrl = [[NSURL alloc] initWithString:[_url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] relativeToURL:base];
+    NSLog(@"%@",htmlUrl);
+    [_readWebView loadRequest:[NSURLRequest requestWithURL:htmlUrl]];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
